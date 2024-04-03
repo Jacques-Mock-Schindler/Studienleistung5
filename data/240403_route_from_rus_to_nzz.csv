@@ -1,0 +1,9 @@
+IP Address,Location,Network,Postal Code,"Approximate Latitude / Longitude*, and Accuracy Radius",ISP / Organization,Domain,Connection Type
+10.2.0.1,"The IP address '10.2.0.1' is a reserved IP address (private, multicast, etc.)."
+176.96.226.241,"Moscow, Moscow, Russia (RU), Europe",176.96.226.240/31,125310,"55.7483, 37.6171 (20 km)",EstNOC,-,Corporate
+139.45.234.234,"Russia (RU), Europe",139.45.232.0/21,-,"55.7386, 37.6068 (1000 km)",JSC RetnNet,-,Cable/DSL
+87.245.233.73,"United Kingdom (GB), Europe",87.245.232.0/22,-,"51.4964, -0.1224 (200 km)",RU VDS,retn.net,Corporate
+194.68.128.104,"Sweden (SE), Europe",194.68.128.0/24,-,"59.3247, 18.056 (500 km)",-,-,-
+212.23.238.146,"Zurich, Zurich, Switzerland (CH), Europe",212.23.238.144/28,8027,"47.3682, 8.5671 (20 km)",COLT Technology Services Group,colt.net,Corporate
+194.40.224.14,"Switzerland (CH), Europe",194.40.224.0/21,-,"47.1449, 8.1551 (100 km)",Neue Zuercher Zeitung,-,Corporate
+194.40.217.80,"Switzerland (CH), Europe",194.40.216.0/21,-,"47.1449, 8.1551 (100 km)",Neue Zuercher Zeitung,-,Corporate
