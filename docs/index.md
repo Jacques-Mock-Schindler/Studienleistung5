@@ -13,4 +13,13 @@ Zensur unter Umgehung von behördlichen Zugangsbeschränkungen
 Informationen auszutauschen.
 
 Dies sind meines Erachtens gesellschaftliche Gründe, sich mit den
-technischen Aspekten von Computernetzwerken auseinanderzusetzen.
+technischen Aspekten von Computernetzwerken auseinanderzusetzen.  
+
+## Motivation
+
+Zum Einstieg ins Thema wird den Schülerinnen und Schüler ein Bericht
+über ein Exil Medien Projekt für Russland anhand einer Agenturmeldung
+aus dem Standard vorgestellt. Daraus abgeleitet wird die Frage gestellt,
+ob aus Russland heraus der Zugriff auf die Website der NZZ möglich ist
+und wenn ja auf welchem Weg. Dies führt zur Besprechung der IP Adressen
+und so zum TCP/IP Protokoll.
