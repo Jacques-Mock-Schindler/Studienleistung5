@@ -23,3 +23,10 @@ aus dem Standard vorgestellt. Daraus abgeleitet wird die Frage gestellt,
 ob aus Russland heraus der Zugriff auf die Website der NZZ möglich ist
 und wenn ja auf welchem Weg. Dies führt zur Besprechung der IP Adressen
 und so zum TCP/IP Protokoll.
+
+## Grobkonzept
+
+- IP Adressen
+- OSI Modell / TCP/IP Modell
+- NAT Protokoll
+- Paketanalyse
