@@ -30,3 +30,9 @@ der IP Adressen und so zum TCP/IP Protokoll.
 - OSI Modell / TCP/IP Modell
 - NAT Protokoll
 - Paketanalyse
+
+## Domain Name System
+
+Wie wird eine Textbasierte `url` in eine IP-Adresse aufgelöst?
+
+Durch DNS-Server. Diese haben fixe IP-Adressen.
