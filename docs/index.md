@@ -17,12 +17,12 @@ technischen Aspekten von Computernetzwerken auseinanderzusetzen.
 
 ## Motivation
 
-Zum Einstieg ins Thema wird den Schülerinnen und Schüler ein Bericht
-über ein Exil Medien Projekt für Russland anhand einer Agenturmeldung
-aus dem Standard vorgestellt. Daraus abgeleitet wird die Frage gestellt,
-ob aus Russland heraus der Zugriff auf die Website der NZZ möglich ist
-und wenn ja auf welchem Weg. Dies führt zur Besprechung der IP Adressen
-und so zum TCP/IP Protokoll.
+Zum Einstieg ins Thema wird den Schülerinnen und Schüler ein Artikel mit
+dem Titel "Wie China unter Xi das Internet kontrolliert" aus der NZZ vom
+24\. Oktober 2022 vorgestellt.  
+Daraus ergibt sich die Fragestellung, wie die Verbindungen zwischen
+Computern im Internet bewerkstelligt werden. Dies führt zur Besprechung
+der IP Adressen und so zum TCP/IP Protokoll.
 
 ## Grobkonzept
 
