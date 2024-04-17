@@ -11,6 +11,7 @@ author: Jacques Mock Schindler
 # Einführung in TCP/IP
 
 ---
+
 ![NZZ vom 24. Oktober 22](../data/images/nzz_anriss.png)
 
 ---
@@ -31,7 +32,10 @@ Die URL wird durch eine Anfrage auf einem Domain Name System Server in
 eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
 beobachten.
 
+![Wireshark](../data/images/suche_nzz_zusammenfassung.png)
+
 ---
+
 ## Das Domain Name System
 
 Grundsätzlich werden Computer über eine Adresse aus Zahlen angesprochen.
