@@ -38,7 +38,9 @@ beobachten.
 ![Wireshark](../data/images/suche_nzz_zusammenfassung.png)
 
 Die IP Adresse 192.168.160.106 ruft die IP Adresse 9.9.9.9 auf, um die
-IP Adresse von www.nzz.ch abzufragen.
+IP Adresse von www.nzz.ch abzufragen.  
+192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
+9.9.9.9 ist der DNS Server.
 
 ---
 
