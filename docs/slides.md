@@ -24,6 +24,11 @@ author: Jacques Mock Schindler
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
 ---
+
+### URL zu IP-Adresse
+
+
+---
 ## Das Domain Name System
 
 Grundsätzlich werden Computer über eine Adresse aus Zahlen angesprochen.
@@ -35,6 +40,11 @@ erreichbar. Versuchen Sie jedoch die IP-Adresse 142.250.203.99 zu erreichen.
 ---
 
 ### Domain Name System - Server
+
+Was geschieht, wenn eine URL im Browser eingegeben wird?
+
+Es wird eine Anfrage an einen DNS-Server gestartet.
+ 
 
 ---
 
