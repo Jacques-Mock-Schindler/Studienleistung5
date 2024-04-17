@@ -24,6 +24,10 @@ Daraus ergibt sich die Fragestellung, wie die Verbindungen zwischen
 Computern im Internet bewerkstelligt werden. Dies führt zur Besprechung
 der IP Adressen und so zum TCP/IP Protokoll.
 
+## Vorausgesetzte Vorkenntnisse
+
+Die SuS kennen die Grundzüge der Vergabe von Internetdomains.
+
 ## Grobkonzept
 
 - IP Adressen
