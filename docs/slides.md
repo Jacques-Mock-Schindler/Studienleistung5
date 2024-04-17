@@ -63,7 +63,18 @@ noch die vorhersschende Form der Adressierung im Internet.
 
 ### URL zu IP-Adresse
 
-![DNS-Header](../data/images/suche_nzz_inhalt.png)
+Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
+Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolg
+von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die
+eigentliche Anfrage kommt.
+
+---
+
+### URL zu IP-Adresse
+
+![DNS Message](../data/images/DNS_message.png)
+
+
 
 ---
 
