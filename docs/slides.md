@@ -37,8 +37,8 @@ beobachten.
 
 ![Wireshark](../data/images/suche_nzz_zusammenfassung.png)
 
-Die IP Adresse 192.168.160.106 ruft die IP Adresse 9.9.9.9 auf, um die
-IP Adresse von www.nzz.ch abzufragen.  
+Die IP-Adresse 192.168.160.106 ruft die IP-Adresse 9.9.9.9 auf, um die
+IP-Adresse von www.nzz.ch abzufragen.  
 192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
 9.9.9.9 ist der DNS Server.
 
@@ -46,7 +46,7 @@ IP Adresse von www.nzz.ch abzufragen.
 
 #### IP Adresse
 
-Es gibt zwei Arten von IP Adressen:
+Es gibt zwei Arten von IP-Adressen:
 
 - IPv4  
   Diese Adressen bestehen aus 32 Bits und werden in der Form
@@ -64,7 +64,7 @@ noch die vorhersschende Form der Adressierung im Internet.
 ### URL zu IP-Adresse
 
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
-Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolg
+Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt
 von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die
 eigentliche Anfrage kommt.
 
