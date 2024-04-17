@@ -71,8 +71,14 @@ eigentliche Anfrage kommt.
 ---
 
 ### URL zu IP-Adresse
+<style>
+  section scope {font-size: 10px;}
+</style>
 
-![DNS Message](../data/images/DNS_message.png)
+![DNS Message](../data/images/DNS_message.png)  
+Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated,
+volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing
+series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
 
 
 
