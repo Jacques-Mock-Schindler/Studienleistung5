@@ -27,6 +27,9 @@ Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
 ### URL zu IP-Adresse
 
+Die URL wird durch eine Anfrage auf einem Domain Name System Server in
+eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
+beobachten.
 
 ---
 ## Das Domain Name System
