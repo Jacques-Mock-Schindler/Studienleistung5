@@ -97,6 +97,10 @@ solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die
 private Adresse des lokalen Computers in die Adresse des Routers
 übersetzt. 
 
+<!--
+NAT soll nicht vertieft werden. Die kursorische Behandlung soll lediglich sicherstellen, dass der Übergang von einem Intranet ins Internet nachvollzogen werden kann.
+-->
+
 ---
 
 ##### Network Address Translation (NAT)
@@ -110,6 +114,13 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ---
 
+### Domain Name System (DNS)
+
+Um von einer URL zu einer IP-Adresse zu gelangen, muss diese von einem
+DNS-Server abgefragt werden.
+
+---
+
 ### URL zu IP-Adresse
 
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
@@ -117,22 +128,18 @@ Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt
 von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die
 eigentliche Anfrage kommt.  
 Auf der folgenden Folie findet sich eine schematische Darstellung einer
-solchen DNS Anfrage<sup>[1]</sup>
-
-[1]: Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated,
-volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing
-series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
+solchen DNS Anfrage.
 
 ---
 
 ### URL zu IP-Adresse
-<style>
-  section scope {font-size: 10px;}
+<style scoped>
+p {font-size: 12px}
 </style>
 
 ![DNS Message](../data/images/DNS_message.png)  
 
-
+Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
 
 
 ---
