@@ -160,7 +160,10 @@ Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfrag
 
 ---
 
-### URL zu IP-Adresse
+### DNS-Anfrage
+
+Wie sieht das DNS-Anfrage Packet aus?
+
 
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
 Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt
@@ -171,7 +174,8 @@ solchen DNS Anfrage.
 
 ---
 
-### URL zu IP-Adresse
+### DNS-Anfrage (schematische Darstellung)
+
 <style scoped>
 p {font-size: 12px}
 </style>
@@ -183,13 +187,27 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ---
 
-## Das Domain Name System
+## DNS-Anfrage (Wireshark Packet Analyse)
 
-Grundsätzlich werden Computer über eine Adresse aus Zahlen angesprochen.
-Die entsprechende Adresse der NZZ lautet:  
-194.40.217.80  
-Aufgrund von Servereinstellungen ist die NZZ so allerdings nicht
-erreichbar. Versuchen Sie jedoch die IP-Adresse 142.250.203.99 zu erreichen.
+<style scoped>
+p {font-size: 12px}
+</style>
+
+![Wireshark Package Overview](../data/images/query_totale.png)
+
+Quelle: Selbst erstellter Screenshot vom 21. April 24 aus dem Aufgezeichneten Netzwerkverkehr beim Aufruf von www.nzz.ch.
+
+0. Zusammenfassung des Paketes (Abgeschnitten)
+1. Network Access Layer
+2. Internet Layer
+3. Transport Layer
+4. Application Layer
+
+<!--
+An dieser Stelle kann das Layermodell repetiert werden.
+
+Auf dem Internet Layer sieht man, dass die Quelle der Anfrage eine private IPv4 Adresse (10.143.124.203) ist. Das Ziel der Anfrage ist der voreingestellte DNS-Server.
+-->
 
 ---
 
