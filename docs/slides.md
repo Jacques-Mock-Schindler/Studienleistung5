@@ -136,7 +136,7 @@ Computers.
 
 ![DNS-Server](../data/images/bild_ip_dns-server.png)
 
-Die hier eingetragenen DNS-Server wurden von der Swisscom zugewiesen.
+Der erste hier eingetragene DNS-Server wurde manuell festgelegt. 
 
 <!--
 Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
@@ -206,7 +206,11 @@ Quelle: Selbst erstellter Screenshot vom 21. April 24 aus dem Aufgezeichneten Ne
 <!--
 An dieser Stelle kann das Layermodell repetiert werden.
 
-Auf dem Internet Layer sieht man, dass die Quelle der Anfrage eine private IPv4 Adresse (10.143.124.203) ist. Das Ziel der Anfrage ist der voreingestellte DNS-Server.
+Auf dem Internet Layer sieht man, dass die Quelle der Anfrage eine private IPv4 Adresse (192.168.124.106) ist. Das Ziel der Anfrage ist der voreingestellte DNS-Server.
+
+Auf dem Transportlayer ist zu sehen, dass als Ausgangsport ein willkürlich gewählter Port ausserhalb des Ranges der well known ports (port > 49'151) liegt. Der Zielport für die DNS-Abfrage ist 53, der von der IANA diesem Zweck vorbehalten ist.
+
+Auf dem Application Layer schlussendlich ist zu sehen, dass es sich um eine DNS-Anfrage handelt. Was ja auch dem Ziel der Übung entspricht.
 -->
 
 ---
