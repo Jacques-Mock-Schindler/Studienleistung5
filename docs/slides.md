@@ -98,9 +98,16 @@ private Adresse des lokalen Computers in die Adresse des Routers
 übersetzt. 
 
 ---
+
 ##### Network Address Translation (NAT)
+<style scoped>
+p {font-size: 12px}
+</style>
 
 ![Übersicht NAT](../data/images/grafik_nat.png)
+
+Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 304.
+
 ---
 
 ### URL zu IP-Adresse
