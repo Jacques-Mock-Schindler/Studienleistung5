@@ -18,6 +18,10 @@ author: Jacques Mock Schindler
 
 ![NZZ vom 24. Oktober 22](../data/images/nzz_anriss.png)
 
+<!--
+Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend auf Fragen zum Artikel kann dann in das Thema TCP/IP eingeführt werden.
+-->
+
 ---
 
 ## Was es braucht, um die Website der NZZ aufzurufen
@@ -58,6 +62,10 @@ Es gibt zwei Arten von IP-Adressen:
   
 Obwohl der Adressraum von IPv4 Adressen knapp wird, ist es aktuell immer
 noch die vorherrschende Form der Adressierung im Internet.
+
+<!--
+An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die Anzahl verfügbarer Adressen und den Bedarf an verfügbaren Adressen zu sprechen.
+-->
 
 ---
 
