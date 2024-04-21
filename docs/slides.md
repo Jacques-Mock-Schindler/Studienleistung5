@@ -136,8 +136,26 @@ Computers.
 
 ![DNS-Server](../data/images/bild_ip_dns-server.png)
 
+Die hier eingetragenen DNS-Server wurden von der Swisscom zugewiesen.
+
 <!--
 Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
+-->
+
+---
+
+#### Ein paar Gedanken zu den lokalen DNS-Einstellungen
+
+- Welche Reaktionszeit hat der DNS-Server?
+- Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
+- Schützt der DNS-Server meine Privatsphäre?
+
+<!--
+Die SuS machen ein Ping gegen ihren DNS-Server sowie gegen 1.1.1.1 (Cloudflare), 8.8.8.8 (Google) oder 9.9.9.9 (Quad9).
+
+Diskussion möglicher Gefahren im Zusammenhang mit DNS-Abfragen.
+
+Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfragen.
 -->
 
 ---
