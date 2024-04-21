@@ -66,7 +66,13 @@ noch die vorhersschende Form der Adressierung im Internet.
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
 Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt
 von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die
-eigentliche Anfrage kommt.
+eigentliche Anfrage kommt.  
+Auf der folgenden Folie findet sich eine schematische Darstellung einer
+solchen DNS Anfrage<sup>[1]</sup>
+
+[1]: Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated,
+volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing
+series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
 
 ---
 
@@ -76,9 +82,7 @@ eigentliche Anfrage kommt.
 </style>
 
 ![DNS Message](../data/images/DNS_message.png)  
-Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated,
-volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing
-series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
+
 
 
 
