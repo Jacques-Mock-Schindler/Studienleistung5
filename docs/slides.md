@@ -122,7 +122,23 @@ gehörige IP-Adresse gefunden werden.
 Dieser Vorgang wird als Namensauflösung (*name resolution*) bezeichnet.  
 
 Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank
-mit dem Namen *Domain Name System*.
+mit dem Namen *Domain Name System (DNS)*.
+
+---
+
+### Domain Name System (DNS)
+
+Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen
+Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
+
+Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen
+Computers.  
+
+![DNS-Server](../data/images/bild_ip_dns-server.png)
+
+<!--
+Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
+-->
 
 ---
 
