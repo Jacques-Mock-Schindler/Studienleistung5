@@ -44,7 +44,7 @@ IP-Adresse von www.nzz.ch abzufragen.
 
 ---
 
-#### IP Adresse
+#### IP-Adresse
 
 Es gibt zwei Arten von IP-Adressen:
 
@@ -53,11 +53,25 @@ Es gibt zwei Arten von IP-Adressen:
   255.255.255.255 dargestellt
 - IPv6  
   Diese (neueren) Adressen bestehen aus 128 Bits und werden hexadezimal
-  dargestelt. Eine IPv6 Adresse hat für die Darstellung das Format
+  dargestellt. Eine IPv6 Adresse hat für die Darstellung das Format
   2001:0db8:85a3:0000:0000:8a2e:0370:7344
   
 Obwohl der Adressraum von IPv4 Adressen knapp wird, ist es aktuell immer
-noch die vorhersschende Form der Adressierung im Internet.
+noch die vorherrschende Form der Adressierung im Internet.
+
+---
+
+##### IPv4-Adresse
+
+- IPv4-Adressen werden in verschiedene Gruppen unterteilt.
+- Für den vorliegenden Zweck reicht die Unterteilung in öffentliche und
+  private Adressen. Private Adressen sind die folgenden drei Blöcke:
+  - 10.0.0.0 – 10.255.255.255
+  - 172.16.0.0 – 172.31.255.255
+  - 192.168.0.0 – 192.168.255.255
+- Private Adressen sind aus dem Internet nicht direkt erreichbar. Sie
+  dienen der Adressierung von Computern in einem lokalen Netzwerk.
+
 
 ---
 
