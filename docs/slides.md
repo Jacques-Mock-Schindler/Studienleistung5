@@ -116,8 +116,13 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ### Domain Name System (DNS)
 
-Um von einer URL zu einer IP-Adresse zu gelangen, muss diese von einem
-DNS-Server abgefragt werden.
+Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch
+gehörige IP-Adresse gefunden werden.  
+
+Dieser Vorgang wird als Namensauflösung (*name resolution*) bezeichnet.  
+
+Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank
+mit dem Namen *Domain Name System*.
 
 ---
 
