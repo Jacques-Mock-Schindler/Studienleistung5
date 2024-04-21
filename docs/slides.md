@@ -46,6 +46,14 @@ IP-Adresse von www.nzz.ch abzufragen.
 192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
 9.9.9.9 ist der DNS Server.
 
+<!--
+Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen. 
+
+Die Besprechung des Resultates in der Packetlistenanzeige von Wireshark führt dann zur Diskussion der IPv4-Adressen und der DNS Anfrage auf den kommenden Folien.
+
+Trotz allfälliger Bedenken gegenüber dem Einsatz von Wireshark durch die SuS bin ich der Auffassung, dass die SuS unbedingt mit den richtigen Werkzeugen arbeiten sollen. Die Beschränkung auf Lernprogramme untergräbt die Glaubwürdigkeit der LP.
+-->
+
 ---
 
 #### IP-Adresse
