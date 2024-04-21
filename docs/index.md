@@ -26,7 +26,10 @@ der IP Adressen und so zum TCP/IP Protokoll.
 
 ## Vorausgesetzte Vorkenntnisse
 
-Die SuS kennen die Grundzüge der Vergabe von Internetdomains.
+Die SuS 
+
+- sind mit dem binären und dem hexadezimalen Zahlensystem vertraut;
+- kennen die Grundzüge der Vergabe von Internetdomains.
 
 ## Grobkonzept
 
