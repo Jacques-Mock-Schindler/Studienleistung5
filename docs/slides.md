@@ -47,7 +47,7 @@ IP-Adresse von www.nzz.ch abzufragen.
 9.9.9.9 ist der DNS Server.
 
 <!--
-Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen. 
+Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen.
 
 Die Besprechung des Resultates in der Packetlistenanzeige von Wireshark führt dann zur Diskussion der IPv4-Adressen und der DNS Anfrage auf den kommenden Folien.
 
@@ -88,7 +88,19 @@ An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die 
 - Private Adressen sind aus dem Internet nicht direkt erreichbar. Sie
   dienen der Adressierung von Computern in einem lokalen Netzwerk.
 
+---
 
+##### Network Address Translation (NAT)
+
+Damit die Kommunikation zwischen Computern mit einer öffentlichen und
+solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die
+private Adresse des lokalen Computers in die Adresse des Routers
+übersetzt. 
+
+---
+##### Network Address Translation (NAT)
+
+![Übersicht NAT](../data/images/grafik_nat.png)
 ---
 
 ### URL zu IP-Adresse
