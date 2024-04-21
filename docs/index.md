@@ -29,7 +29,8 @@ der IP Adressen und so zum TCP/IP Protokoll.
 Die SuS 
 
 - sind mit dem binären und dem hexadezimalen Zahlensystem vertraut;
-- kennen die Grundzüge der Vergabe von Internetdomains.
+- kennen die Grundzüge der Vergabe von Internetdomains sowie
+- das OSI- bzw. IP-Layer-Modell.
 
 ## Grobkonzept
 
