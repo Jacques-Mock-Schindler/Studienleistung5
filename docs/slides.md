@@ -306,21 +306,22 @@ Die Antwort auf die Anfrage ist 194.40.217.80. Als nächstes kann der Output von
 
 ### Verbindungsaufbau mit www.nzz.ch
 
+<style scoped>
+p {font-size: 12px}
+</style>
+
 ```txt
-10.128.115.35	194.40.217.80	TCP	65035 → 443 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
-194.40.217.80	10.128.115.35	TCP	443 → 65035 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1420 SACK_PERM WS=128
-10.128.115.35	194.40.217.80	TCP	65035 → 443 [ACK] Seq=1 Ack=1 Win=131840 Len=0
-10.128.115.35	194.40.217.80	TCP	65035 → 443 [ACK] Seq=1 Ack=1 Win=131840 Len=1420 [TCP segment of a reassembled PDU]
-10.128.115.35	194.40.217.80	TLSv1.3	Hello (SNI=www.nzz.ch)
-194.40.217.80	10.128.115.35	TCP	443 → 65035 [ACK] Seq=1 Ack=1421 Win=64128 Len=0
-194.40.217.80	10.128.115.35	TCP	443 → 65035 [ACK] Seq=1 Ack=2120 Win=63488 Len=0
-194.40.217.80	10.128.115.35	TLSv1.3	Server Hello, Change Cipher Spec, Application Data
+1635	10.128.115.35	194.40.217.80	TCP	52	65035 → 443 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+1663	194.40.217.80	10.128.115.35	TCP	52	443 → 65035 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1420 SACK_PERM WS=128
+1664	10.128.115.35	194.40.217.80	TCP	40	65035 → 443 [ACK] Seq=1 Ack=1 Win=131840 Len=0
 ```
 
 ![Three-Way Handshake](../data/images/grafik_handshake.png)
 
+Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 596.
+
 <!--
-Mit dem Filter ip==194.40.217.80 kann der doppelte Handshake für die TCP Verbindungsaufnahme gezeigt werden.
+Mit dem Filter ip==194.40.217.80 kann der Three-Way Handshake für die TCP Verbindungsaufnahme gezeigt werden.
 -->
 
 ---
