@@ -39,7 +39,9 @@ Die URL wird durch eine Anfrage auf einem Domain Name System Server in
 eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
 beobachten.
 
-![Wireshark](../data/images/suche_nzz_zusammenfassung.png)
+```txt
+10	3.502537	192.168.124.106	9.9.9.9	DNS	70	Standard query 0xcf66 A www.nzz.ch
+```
 
 Die IP-Adresse 192.168.160.106 ruft die IP-Adresse 9.9.9.9 auf, um die
 IP-Adresse von www.nzz.ch abzufragen.  
@@ -182,9 +184,7 @@ p {font-size: 12px}
 
 ![DNS Message](../data/images/DNS_message.png)  
 
-Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated,
-volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing
-series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
+Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
 
 ---
 
