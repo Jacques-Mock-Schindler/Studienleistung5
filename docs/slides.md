@@ -293,6 +293,7 @@ Domain Name System (response)
 
 ```
 
+
 <!--
 Verweis auf die übereinstimmende Transaction ID und die angepassten Flags.
 
@@ -300,6 +301,8 @@ Die Antwort auf die Anfrage ist 194.40.217.80. Als nächstes kann der Output von
 -->
 
 ---
+
+
 
 ### Verbindungsaufbau mit www.nzz.ch
 
@@ -313,6 +316,8 @@ Die Antwort auf die Anfrage ist 194.40.217.80. Als nächstes kann der Output von
 194.40.217.80	10.128.115.35	TCP	443 → 65035 [ACK] Seq=1 Ack=2120 Win=63488 Len=0
 194.40.217.80	10.128.115.35	TLSv1.3	Server Hello, Change Cipher Spec, Application Data
 ```
+
+![Three-Way Handshake](../data/images/grafik_handshake.png)
 
 <!--
 Mit dem Filter ip==194.40.217.80 kann der doppelte Handshake für die TCP Verbindungsaufnahme gezeigt werden.
