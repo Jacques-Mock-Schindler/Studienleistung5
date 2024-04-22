@@ -326,15 +326,11 @@ Mit dem Filter ip==194.40.217.80 kann der Three-Way Handshake für die TCP Verbi
 
 ---
 
-### Domain Name System - Server
 
-Was geschieht, wenn eine URL im Browser eingegeben wird?
+![NZZ](../data/images/nzz_logo.png)
 
-Es wird eine Anfrage an einen DNS-Server gestartet.
- 
-
----
-
-## Das OSI- bzw. IP-Layer Modell
+<!--
+Damit ist nachvollziehbar dargelegt, wie die Verbindung zu einer gegebenen Website aufgebaut wird.
+-->
 
 ---
