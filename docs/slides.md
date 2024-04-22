@@ -182,20 +182,22 @@ p {font-size: 12px}
 
 ![DNS Message](../data/images/DNS_message.png)  
 
-Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
-
+Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated,
+volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing
+series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 521.
 
 ---
 
 ## DNS-Anfrage (Wireshark Packet Analyse)
 
-<style scoped>
-p {font-size: 12px}
-</style>
+```txt
+Frame 10: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) ...
+Ethernet II, ...
+Internet Protocol Version 4, Src: 192.168.124.106, Dst: 9.9.9.9
+User Datagram Protocol, Src Port: 51349, Dst Port: 53
+Domain Name System (query)
 
-![Wireshark Package Overview](../data/images/query_totale.png)
-
-Quelle: Selbst erstellter Screenshot vom 21. April 24 aus dem Aufgezeichneten Netzwerkverkehr beim Aufruf von www.nzz.ch.
+```
 
 0. Zusammenfassung des Paketes (Abgeschnitten)
 1. Network Access Layer
