@@ -201,7 +201,7 @@ Quelle: Selbst erstellter Screenshot vom 21. April 24 aus dem Aufgezeichneten Ne
 1. Network Access Layer
 2. Internet Layer
 3. Transport Layer
-4. Application Layer
+4. Application Layer (um den geht es)
 
 <!--
 An dieser Stelle kann das Layermodell repetiert werden.
@@ -211,6 +211,92 @@ Auf dem Internet Layer sieht man, dass die Quelle der Anfrage eine private IPv4 
 Auf dem Transportlayer ist zu sehen, dass als Ausgangsport ein willkürlich gewählter Port ausserhalb des Ranges der well known ports (port > 49'151) liegt. Der Zielport für die DNS-Abfrage ist 53, der von der IANA diesem Zweck vorbehalten ist.
 
 Auf dem Application Layer schlussendlich ist zu sehen, dass es sich um eine DNS-Anfrage handelt. Was ja auch dem Ziel der Übung entspricht.
+-->
+
+---
+
+## DNS-Anfrage (Wireshark Packet Analyse)
+
+```txt
+Domain Name System (query)
+    Transaction ID: 0xcf66
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        www.nzz.ch: type A, class IN
+```
+
+<!--
+Der Inhalt der Anfrage kann nun mit dem Schema abgeglichen werden:
+
+Hat die Transaction ID 0xcf66 tatsächlich eine Länge von 16 Bit? (Ja, sie entspricht 1100111101100110.)
+
+Was ist in den Flags codiert?
+
+Was ist der Inhalt der Anfrage?
+-->
+
+---
+
+### DNS-Anfrage (Analyse der Antwort)
+
+```txt
+Frame 11: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface ...
+Ethernet II, Src: ...
+Internet Protocol Version 4, Src: 9.9.9.9, Dst: 192.168.124.106
+User Datagram Protocol, Src Port: 53, Dst Port: 51349
+Domain Name System (response)
+
+```
+
+<!--
+Zusammenfassung der Antwort. Hier erfolgt der Hinweis auf die vertauschten IP-Adressen und Portnummern
+-->
+
+---
+
+### DNS-Anfrage (Analyse der Antwort)
+
+```txt
+Domain Name System (response)
+    Transaction ID: 0xcf66
+    Flags: 0x8180 Standard query response, No error
+        1... .... .... .... = Response: Message is a response
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... .0.. .... .... = Authoritative: Server is not an authority for domain
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... 1... .... = Recursion available: Server can do recursive queries
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+        .... .... .... 0000 = Reply code: No error (0)
+    Questions: 1
+    Answer RRs: 1
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        www.nzz.ch: type A, class IN
+    Answers
+        www.nzz.ch: type A, class IN, addr 194.40.217.80
+    [Request In: 10]
+    [Time: 0.237119000 seconds]
+
+```
+
+<!--
+Verweis auf die übereinstimmende Transaction ID und die angepassten Flags.
+
+Die Antwort auf die Anfrage ist 194.40.217.80. Die Antwort soll mit nslookout überprüft werden.
 -->
 
 ---
