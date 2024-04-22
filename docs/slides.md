@@ -296,8 +296,23 @@ Domain Name System (response)
 <!--
 Verweis auf die übereinstimmende Transaction ID und die angepassten Flags.
 
-Die Antwort auf die Anfrage ist 194.40.217.80. Die Antwort soll mit nslookout überprüft werden.
+Die Antwort auf die Anfrage ist 194.40.217.80. Als nächstes kann der Output von Wireshark nach dieser IP-Adresse gefiltert werden.
 -->
+
+---
+
+### Verbindungsaufbau mit www.nzz.ch
+
+```txt
+1635	13.635336	10.128.115.35	194.40.217.80	TCP	52	65035 → 443 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+1663	13.700193	194.40.217.80	10.128.115.35	TCP	52	443 → 65035 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1420 SACK_PERM WS=128
+1664	13.700420	10.128.115.35	194.40.217.80	TCP	40	65035 → 443 [ACK] Seq=1 Ack=1 Win=131840 Len=0
+1666	13.701986	10.128.115.35	194.40.217.80	TCP	1460	65035 → 443 [ACK] Seq=1 Ack=1 Win=131840 Len=1420 [TCP segment of a reassembled PDU]
+1667	13.701986	10.128.115.35	194.40.217.80	TLSv1.3	739	Client Hello (SNI=www.nzz.ch)
+1700	13.793399	194.40.217.80	10.128.115.35	TCP	40	443 → 65035 [ACK] Seq=1 Ack=1421 Win=64128 Len=0
+1701	13.793399	194.40.217.80	10.128.115.35	TCP	40	443 → 65035 [ACK] Seq=1 Ack=2120 Win=63488 Len=0
+1702	13.793399	194.40.217.80	10.128.115.35	TLSv1.3	1460	Server Hello, Change Cipher Spec, Application Data
+```
 
 ---
 
