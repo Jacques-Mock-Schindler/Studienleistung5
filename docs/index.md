@@ -32,6 +32,18 @@ Die SuS
 - kennen die Grundzüge der Vergabe von Internetdomains sowie
 - das OSI- bzw. IP-Layer-Modell.
 
+## Lernziele
+
+Die SuS können
+
+- die Aufgabe eines DNS-Servers im Zusammenhang mit dem
+  Verbindungsaufbau zwischen einem Computer in einem lokalen Netzwerk
+  und einer Website im Internet sowie
+- den Three-Way Handshake beim Aufbau der Verbindung zwischen Server und
+  Client erläutern. Ausserdem können sie
+- unter Anleitung Wireshark als Werkzeug für einfache Netzwerkanalysen
+  einsetzen. 
+
 ## Grobkonzept
 
 - IP Adressen
