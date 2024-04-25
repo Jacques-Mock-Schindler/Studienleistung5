@@ -82,6 +82,34 @@ im letzten Drittel des Artikels hingewiesen werden.
 Aus diesem Abschnitt ergibt sich die Frage, wie der Aufbau einer
 Verbindung zu einer bestimmten Website im Detail abläuft.
 
+### Aufzeichnung der DNS-Abfrage
+
+1. Terminal öffnen
+2. Wireshark öffnen
+3. Aufzeichnung starten
+4. nzz.ch pingen
+5. Aufzeichnung anhalten 
+6. Anzeigefilter dns setzten
+
+Das ergibt die folgende Zusammenfassung:
+
+```txt
+No.  Time      Source           Destination      Protocol  Length  Info
+13   6.313849  10.134.61.184    193.135.142.246  DNS       56      Standard query 0x9e0b A www.nzz.ch
+14   6.371778  193.135.142.246  10.134.61.184    DNS       72      Standard query response 0x9e0b A www.nzz.ch A 194.40.217.80
+```
+
+Basierend auf dieser Zusammenfassung kann das Mapping von URL nach der
+IP-Adresse besprochen werden.  
+Gleichzeitig bietet die Zusammenfassung die Möglichkeit, auf die
+verschiedenen DNS-Server einzugehen und Charakteristika verschiedener
+Anbieter zu besprechen. In der vorliegenden Beispielzusammenfassung
+wurde die Verbindung zum Internet mit einem Mobilfunk Modem hergestellt.
+Der DNS-Server ist deshalb der voreingestellte Server der Swisscom.  
+Man kann an dieser Stelle allerdings auch auf die Netzwerkeinstellungen
+im allgemeinen eingehen und den SuS zeigen, wie diese gegebenenfalls
+anzupassen wären.
+
 
 ## Grobkonzept
 
