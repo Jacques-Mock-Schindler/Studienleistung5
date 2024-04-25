@@ -227,6 +227,19 @@ Auf dem Application Layer schlussendlich ist zu sehen, dass es sich um eine DNS-
 
 ---
 
+<style scoped>
+p {font-size: 12px}
+</style>
+
+### OSI- bzw. TCP/IP-Layer Modell
+
+![Gegenüberstellung OSI- bzw. TCP/IP-Layer
+Modell](../data/images/layer_modell.png)
+
+Quelle: https://www.geeksforgeeks.org/tcp-ip-model/; besucht am 25. April 2024
+
+---
+
 ## DNS-Anfrage (Wireshark Packet Analyse)
 
 ```txt
