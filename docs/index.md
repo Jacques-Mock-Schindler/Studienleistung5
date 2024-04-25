@@ -146,7 +146,13 @@ Domain Name System (query)
 ```
 
 Das Listing kann dazu verwendet werden, das OSI-Layer-Modell zu
-repetieren und dem TCP/IP-Layer Modell gegenüberzutstellen.
+repetieren und dem TCP/IP-Layer Modell gegenüberzustellen.  
+
+![Gegenüberstellung OSI- bzw.
+TCP/IP-Modell](../data/images/layer_modell.png)
+
+Quelle: https://www.geeksforgeeks.org/tcp-ip-model/; zugegriffen am 25.
+April 2024.
 
 ## Grobkonzept
 
