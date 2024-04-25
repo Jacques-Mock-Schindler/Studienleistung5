@@ -33,6 +33,16 @@ Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
 ---
 
+## Beobachten des Netzwerkverkehrs mit Wireshark
+
+In dieser Unterrichtseinheit wird der Netzwerkverkehr mit
+[Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
+
+Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
+
+
+---
+
 ### URL zu IP-Adresse
 
 Die URL wird durch eine Anfrage auf einem Domain Name System Server in
