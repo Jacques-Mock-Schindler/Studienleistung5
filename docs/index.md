@@ -131,6 +131,23 @@ Anschliessend an die Berechnung kann kursorisch auf das NAT Protkoll
 eingegangen werden. Damit soll nur gezeigt werden, dass auch IPv4 mehr
 als $2^{32}$ Adressen ermöglicht.
 
+### Analyse der DNS-Anfrage
+
+Als Vorbereitung des nächsten Analyseschrittes öffnen die SuS die
+Anfrage an den DNS-Server. Dies folgt zu einer Ansicht, welche im
+Wesentlichen wie das folgende Listing aussieht.
+
+```txt
+Frame 13: 56 bytes on wire (448 bits), 56 bytes captured (448 bits) on interface \Device\NPF_{F7C8A86C-E9D7-4080-B7F6-EB45CD1446B6}, id 0
+Raw packet data
+Internet Protocol Version 4, Src: 10.134.61.184, Dst: 193.135.142.246
+User Datagram Protocol, Src Port: 54631, Dst Port: 53
+Domain Name System (query)
+```
+
+Das Listing kann dazu verwendet werden, das OSI-Layer-Modell zu
+repetieren und dem TCP/IP-Layer Modell gegenüberzutstellen.
+
 ## Grobkonzept
 
 - IP Adressen
