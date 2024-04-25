@@ -110,6 +110,26 @@ Man kann an dieser Stelle allerdings auch auf die Netzwerkeinstellungen
 im allgemeinen eingehen und den SuS zeigen, wie diese gegebenenfalls
 anzupassen wären.
 
+### IP-Adressen
+
+Wann gehen uns die IP-Adressen aus?  
+Die SuS sollen Ausrechnen, wie viele IPv4-Adressen grundsätzlich zur
+Verfügung stehen.
+
+$$
+11111111\ 11111111\ 11111111\ 11111111_B = 2^{32} = 4'294'967'296_D
+$$
+
+Als zweite Aufgabe können die SuS den Adressraum der IPv6 Adressen
+berechnen.
+
+$$
+2^{128}
+$$
+
+Anschliessend an die Berechnung kann kursorisch auf das NAT Protkoll
+eingegangen werden. Damit soll nur gezeigt werden, dass auch IPv4 mehr
+als $2^{32}$ Adressen ermöglicht.
 
 ## Grobkonzept
 
