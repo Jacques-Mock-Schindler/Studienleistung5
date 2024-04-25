@@ -44,6 +44,19 @@ Die SuS können
 - unter Anleitung Wireshark als Werkzeug für einfache Netzwerkanalysen
   einsetzen. 
 
+
+## Vorbereitung
+
+Für diese Unterrichtseinheit muss
+[Wireshark](https://www.wireshark.org/)
+auf den Rechnern der SuS installierst sein. Wireshark ist eine Open
+Source Software für die Analyse von Computernetzwerken. In dieser
+Unterrichtseinheit wird Wireshark dazu verwendet, die DNS-Anfrage und
+den Verbindungsaufbau zu einer bestimmten Website (im Beispiel die
+Website der NZZ) zu beobachten.  
+Wireshark verfügt über
+Installationsprogramme für alle gängigen Betriebssysteme.
+
 ## Grobkonzept
 
 - IP Adressen
