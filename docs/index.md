@@ -45,7 +45,7 @@ Die SuS können
   einsetzen. 
 
 
-## Vorbereitung
+## Erforderliche Software bzw. Vorbereitung
 
 Für diese Unterrichtseinheit muss
 [Wireshark](https://www.wireshark.org/)
@@ -56,6 +56,32 @@ den Verbindungsaufbau zu einer bestimmten Website (im Beispiel die
 Website der NZZ) zu beobachten.  
 Wireshark verfügt über
 Installationsprogramme für alle gängigen Betriebssysteme.
+
+## Aufgaben
+
+### Sensibilisierungsaufgabe
+
+Zum Einstieg ins Thema wird der Artikel 
+[«Wie China unter Xi das Internet
+kontrolliert»](https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-kontrolliert-ld.1708411)
+aus der NZZ vom 24. Oktober 2022 gelesen (der Text findet sich als PDF
+in den Unterlagen). Bei der Besprechung soll dann insbesondere auf den
+Abschnitt 
+
+>Die Regierung kann bestimmte URL sperren, etwa nzz.ch, die wie jene
+>praktisch aller grossen westlichen Medien in China verboten ist. Sie
+>kann auch den Zugang zu Websites verhindern, indem sie den Datenverkehr
+>manipuliert. Wenn man nämlich die Adresse einer Website im Browser
+>eintippt, liefern Server des sogenannten Domain Name System (DNS) dazu
+>die passende numerische Internetprotokoll-Adresse (IP) – ausser die
+>Regierung leitet die Anfrage zu einer anderen IP weiter. Sie kann auch
+>einfach die zugrunde liegenden IP-Adressen sperren. 
+
+im letzten Drittel des Artikels hingewiesen werden.
+
+Aus diesem Abschnitt ergibt sich die Frage, wie der Aufbau einer
+Verbindung zu einer bestimmten Website im Detail abläuft.
+
 
 ## Grobkonzept
 
