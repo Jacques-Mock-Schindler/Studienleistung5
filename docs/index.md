@@ -131,7 +131,7 @@ Anschliessend an die Berechnung kann kursorisch auf das NAT Protkoll
 eingegangen werden. Damit soll nur gezeigt werden, dass auch IPv4 mehr
 als $2^{32}$ Adressen ermöglicht.
 
-### Analyse der DNS-Anfrage
+### Analyse der DNS-Anfrage (Überblick)
 
 Als Vorbereitung des nächsten Analyseschrittes öffnen die SuS die
 Anfrage an den DNS-Server. Dies folgt zu einer Ansicht, welche im
@@ -153,6 +153,37 @@ TCP/IP-Modell](../data/images/layer_modell.png)
 
 Quelle: https://www.geeksforgeeks.org/tcp-ip-model/; zugegriffen am 25.
 April 2024.
+
+### Analyse der DNS-Anfrage (Details)
+
+Die SuS sollen die DNS-Anfrage so weit wie möglich Auffalten.
+
+```txt
+Domain Name System (query)
+    Transaction ID: 0x9e0b
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        www.nzz.ch: type A, class IN
+            Name: www.nzz.ch
+            [Name Length: 10]
+            [Label Count: 3]
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+    [Response In: 14]
+
+```
+
+*Aufgabe:* Ordnen Sie dieses Listing dem Prinzipschema einer DNS-Anfrage zu.
 
 ## Grobkonzept
 
