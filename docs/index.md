@@ -91,7 +91,7 @@ Verbindung zu einer bestimmten Website im Detail abläuft.
 5. Aufzeichnung anhalten 
 6. Anzeigefilter dns setzten
 
-Das ergibt die folgende Zusammenfassung:
+Das ergibt eine Zusammenfassung, die im Wesentlichen folgendermassen aussieht:
 
 ```txt
 No.  Time      Source           Destination      Protocol  Length  Info
@@ -182,6 +182,14 @@ Domain Name System (query)
     [Response In: 14]
 
 ```
+
+```hex
+41 f8 01 00 00 01 00 00
+00 00 00 00 03 77 77 77
+03 6e 7a 7a 02 63 68 00
+00 01 00 01
+```
+
 
 *Aufgabe:* Ordnen Sie dieses Listing dem Prinzipschema einer DNS-Anfrage zu.
 
