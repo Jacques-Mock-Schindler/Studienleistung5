@@ -113,15 +113,15 @@ anzupassen wären.
 ### IP-Adressen
 
 Wann gehen uns die IP-Adressen aus?  
-Die SuS sollen Ausrechnen, wie viele IPv4-Adressen grundsätzlich zur
+Berechnen Sie, wie viele IPv4-Adressen grundsätzlich zur
 Verfügung stehen.
 
 $$
 11111111\ 11111111\ 11111111\ 11111111_B = 2^{32} = 4'294'967'296_D
 $$
 
-Als zweite Aufgabe können die SuS den Adressraum der IPv6 Adressen
-berechnen.
+Berechnen Sie, wie viele IPv6-Adressen grundsätzlich zur Verfügung
+stehen. 
 
 $$
 2^{128}
