@@ -190,6 +190,9 @@ Domain Name System (query)
 00 01 00 01
 ```
 
+Die Interpretation der Anfrage auf Stufe einzelner Bit ist eine mögliche
+Differenzierung. 
+
 
 *Aufgabe:* Ordnen Sie dieses Listing dem Prinzipschema einer DNS-Anfrage zu.
 
