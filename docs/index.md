@@ -145,8 +145,8 @@ User Datagram Protocol, Src Port: 54631, Dst Port: 53
 Domain Name System (query)
 ```
 
-Das Listing kann dazu verwendet werden, das OSI-Layer-Modell zu
-repetieren und dem TCP/IP-Layer Modell gegenüberzustellen.  
+Als erstes wird Anhand des obigen Listings das OSI-Layer-Modell 
+repetiert und dem TCP/IP-Layer Modell gegenübergestellt.  
 
 ![Gegenüberstellung OSI- bzw.
 TCP/IP-Modell](../data/images/layer_modell.png)
