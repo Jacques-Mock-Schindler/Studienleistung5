@@ -190,6 +190,16 @@ Domain Name System (query)
 00 01 00 01
 ```
 
+Für die Auswertung der DNS-Anfrage steht ein Arbeitsblatt als
+Hilfsmittel zur Verfügung. Das Arbeitsblatt entspricht in seinem Aufbau
+der Darstellung aus Fall, Kevin R., und W. Richard Stevens. TCP/IP
+illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional
+computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page
+521. 
+
+Die konkrete Aufgabe für die SuS lautet "Übertragen Sie die DNS-Antrage
+als Bitfolge in die Tabelle auf dem Arbeitsblatt."
+
 Die Interpretation der Anfrage auf Stufe einzelner Bit ist eine mögliche
 Differenzierung. 
 
