@@ -184,18 +184,14 @@ Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sic
 
 ### URL zu IP-Adresse
 
-Die URL wird durch eine Anfrage auf einem Domain Name System Server in
-eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
-beobachten.
+Die URL wird durch eine Anfrage auf einem Domain Name System Server in eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark beobachten.
 
 ```txt
-10	3.502537	192.168.124.106	9.9.9.9	DNS	70	Standard query 0xcf66 A www.nzz.ch
+No. Time      Src            Dst      Prot length  Info 
+1   0.000000  192.168.1.107  9.9.9.9  DNS  66      Standard query 0x007a A nzz.ch
 ```
-
-Die IP-Adresse 192.168.160.106 ruft die IP-Adresse 9.9.9.9 auf, um die
-IP-Adresse von www.nzz.ch abzufragen.  
-192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
-9.9.9.9 ist der DNS Server.
+* Die IP-Adresse 192.168.1.107 ruft die IP-Adresse 9.9.9.9 auf, um die IP-Adresse von www.nzz.ch abzufragen.  
+* 192.168.1.101 ist der Rechner, der Versucht www.nzz.ch aufzurufen. 9.9.9.9 ist der DNS Server.
 
 <!--
 Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen.
