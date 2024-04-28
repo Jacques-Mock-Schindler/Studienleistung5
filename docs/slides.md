@@ -16,6 +16,8 @@ author: Jacques Mock Schindler
 
 ---
 
+<!-- paginate: true -->
+
 ![NZZ vom 24. Oktober 22](../data/images/nzz_anriss.png)
 
 <!--
