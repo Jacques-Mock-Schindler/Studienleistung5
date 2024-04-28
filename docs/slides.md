@@ -28,10 +28,9 @@ Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend au
 
 ## Was es braucht, um die Website der NZZ aufzurufen
 
-- eine Adresse
-- www.nzz.ch
-
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
+
+* Diese Frage wird im folgenden Schritt für Schritt beantwortet.
 
 
 ---
@@ -95,7 +94,7 @@ An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die 
 
 ---
 
-##### Network Address Translation (NAT)
+##### Exkurs Network Address Translation (NAT)
 
 Damit die Kommunikation zwischen Computern mit einer öffentlichen und
 solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die
@@ -108,7 +107,7 @@ NAT soll nicht vertieft werden. Die kursorische Behandlung soll lediglich sicher
 
 ---
 
-##### Network Address Translation (NAT)
+##### Exkurs Network Address Translation (NAT)
 <style scoped>
 p {font-size: 12px}
 </style>
