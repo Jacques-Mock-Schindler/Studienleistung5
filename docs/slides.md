@@ -73,8 +73,8 @@ Es gibt zwei Arten von IP-Adressen:
   dargestellt. Eine IPv6 Adresse hat für die Darstellung das Format
   2001:0db8:85a3:0000:0000:8a2e:0370:7344
   
-Obwohl der Adressraum von IPv4 Adressen knapp wird, ist es aktuell immer
-noch die vorherrschende Form der Adressierung im Internet.
+* Obwohl der Adressraum von IPv4 Adressen knapp wird, ist es aktuell
+  immer noch die vorherrschende Form der Adressierung im Internet.
 
 <!--
 An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die Anzahl verfügbarer Adressen und den Bedarf an verfügbaren Adressen zu sprechen.
@@ -84,13 +84,13 @@ An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die 
 
 ##### IPv4-Adresse
 
-- IPv4-Adressen werden in verschiedene Gruppen unterteilt.
-- Für den vorliegenden Zweck reicht die Unterteilung in öffentliche und
+* IPv4-Adressen werden in verschiedene Gruppen unterteilt.
+* Für den vorliegenden Zweck reicht die Unterteilung in öffentliche und
   private Adressen. Private Adressen sind die folgenden drei Blöcke:
   - 10.0.0.0 – 10.255.255.255
   - 172.16.0.0 – 172.31.255.255
   - 192.168.0.0 – 192.168.255.255
-- Private Adressen sind aus dem Internet nicht direkt erreichbar. Sie
+* Private Adressen sind aus dem Internet nicht direkt erreichbar. Sie
   dienen der Adressierung von Computern in einem lokalen Netzwerk.
 
 ---
@@ -121,15 +121,12 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ## Beobachten des Netzwerkverkehrs mit Wireshark
 
-In dieser Unterrichtseinheit wird der Netzwerkverkehr mit
+Um im Detail beobachten zu können, wie die Verbindung mit einer Website
+aufgebaut wird, wird in dieser Unterrichtseinheit der Netzwerkverkehr mit
 [Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
 
-Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
-
-
-
-
-
+Die [Installationsanleitung](https://www.wireshark.org/download.html)
+findet sich auf der Website von Wireshark.
 
 ---
 
