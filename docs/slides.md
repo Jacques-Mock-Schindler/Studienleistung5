@@ -45,6 +45,32 @@ Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sic
 
 ---
 
+## Experiment 1: ping nzz.ch
+
+```txt  
+    Ping wird ausgeführt für nzz.ch [194.40.217.80] mit 32 Bytes Daten:
+    Antwort von 194.40.217.80: Bytes=32 Zeit=10ms TTL=55
+    Antwort von 194.40.217.80: Bytes=32 Zeit=10ms TTL=55
+    Antwort von 194.40.217.80: Bytes=32 Zeit=8ms TTL=55
+    Antwort von 194.40.217.80: Bytes=32 Zeit=14ms TTL=55
+
+    Ping-Statistik für 194.40.217.80:
+        Pakete: Gesendet = 4, Empfangen = 4, Verloren = 0
+        (0% Verlust),
+    Ca. Zeitangaben in Millisek.:
+        Minimum = 8ms, Maximum = 14ms, Mittelwert = 10ms
+
+```
+* Was ist die IP-Adresse?
+* Woher kommt die IP-Adresse für nzz.ch?
+
+<!--
+Besprechen der Ausgabe des Befehls ping nzz.ch. Insbesondere ist darauf hinzuweisen, dass nzz.ch in 194.40.217.80 übersetzt wird.
+-->
+
+
+---
+
 ### URL zu IP-Adresse
 
 Die URL wird durch eine Anfrage auf einem Domain Name System Server in
