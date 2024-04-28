@@ -182,7 +182,8 @@ Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sic
 
 ---
 
-### URL zu IP-Adresse
+
+### Experiment 2: URL zu IP-Adresse
 
 Die URL wird durch eine Anfrage auf einem Domain Name System Server in eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark beobachten.
 
