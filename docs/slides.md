@@ -33,15 +33,6 @@ Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend au
 
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
----
-
-## Beobachten des Netzwerkverkehrs mit Wireshark
-
-In dieser Unterrichtseinheit wird der Netzwerkverkehr mit
-[Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
-
-Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
-
 
 ---
 
@@ -74,10 +65,10 @@ Besprechen der Ausgabe des Befehls ping nzz.ch. Insbesondere ist darauf hinzuwei
 
 Es gibt zwei Arten von IP-Adressen:
 
-- IPv4  
+* IPv4  
   Diese Adressen bestehen aus 32 Bits und werden in der Form
   255.255.255.255 dargestellt
-- IPv6  
+* IPv6  
   Diese (neueren) Adressen bestehen aus 128 Bits und werden hexadezimal
   dargestellt. Eine IPv6 Adresse hat für die Darstellung das Format
   2001:0db8:85a3:0000:0000:8a2e:0370:7344
@@ -125,6 +116,18 @@ p {font-size: 12px}
 ![Übersicht NAT](../data/images/grafik_nat.png)
 
 Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 304.
+
+---
+
+## Beobachten des Netzwerkverkehrs mit Wireshark
+
+In dieser Unterrichtseinheit wird der Netzwerkverkehr mit
+[Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
+
+Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
+
+
+
 
 
 
