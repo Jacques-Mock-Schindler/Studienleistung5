@@ -62,6 +62,13 @@ Besprechen der Ausgabe des Befehls ping nzz.ch. Insbesondere ist darauf hinzuwei
 
 #### IP-Adresse
 
+Die IP-Adresse ist eine eindeutige Nummer, unter welcher ein Computer im
+Internet erreichbar ist.
+
+---
+
+#### IP-Adresse
+
 Es gibt zwei Arten von IP-Adressen:
 
 * IPv4  
@@ -118,14 +125,60 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ---
 
+### Domain Name System (DNS)
+
+Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch
+gehörige IP-Adresse gefunden werden.  
+
+Dieser Vorgang wird als Namensauflösung (*name resolution*) bezeichnet.  
+
+Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank
+mit dem Namen *Domain Name System (DNS)*.
+
+---
+
+### Domain Name System (DNS)
+
+Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen
+Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
+
+Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen
+Computers (Netzwerk und Internet > Netzwerkzugang > Eigenschaften > DNS-Server).  
+
+![DNS-Server](../data/images/bild_ip_dns-server.png)
+
+Beide hier eingetragenen DNS-Server wurden manuell festgelegt. 
+
+<!--
+Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
+-->
+
+---
+
+#### Ein paar Gedanken zu den lokalen DNS-Einstellungen
+
+- Welche Reaktionszeit hat der DNS-Server?
+- Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
+- Schützt der DNS-Server meine Privatsphäre?
+
+<!--
+Die SuS machen ein Ping gegen ihren DNS-Server sowie gegen 1.1.1.1 (Cloudflare), 8.8.8.8 (Google) oder 9.9.9.9 (Quad9).
+
+Diskussion möglicher Gefahren im Zusammenhang mit DNS-Abfragen.
+
+Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfragen.
+-->
+
+
+---
+
 ## Beobachten des Netzwerkverkehrs mit Wireshark
 
 Um im Detail beobachten zu können, wie die Verbindung mit einer Website
 aufgebaut wird, wird in dieser Unterrichtseinheit der Netzwerkverkehr mit
 [Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
 
-Die [Installationsanleitung](https://www.wireshark.org/download.html)
-findet sich auf der Website von Wireshark.
+Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
 
 ---
 
@@ -153,51 +206,6 @@ Trotz allfälliger Bedenken gegenüber dem Einsatz von Wireshark durch die SuS b
 -->
 
 
----
-
-### Domain Name System (DNS)
-
-Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch
-gehörige IP-Adresse gefunden werden.  
-
-Dieser Vorgang wird als Namensauflösung (*name resolution*) bezeichnet.  
-
-Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank
-mit dem Namen *Domain Name System (DNS)*.
-
----
-
-### Domain Name System (DNS)
-
-Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen
-Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
-
-Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen
-Computers.  
-
-![DNS-Server](../data/images/bild_ip_dns-server.png)
-
-Der erste hier eingetragene DNS-Server wurde manuell festgelegt. 
-
-<!--
-Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
--->
-
----
-
-#### Ein paar Gedanken zu den lokalen DNS-Einstellungen
-
-- Welche Reaktionszeit hat der DNS-Server?
-- Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
-- Schützt der DNS-Server meine Privatsphäre?
-
-<!--
-Die SuS machen ein Ping gegen ihren DNS-Server sowie gegen 1.1.1.1 (Cloudflare), 8.8.8.8 (Google) oder 9.9.9.9 (Quad9).
-
-Diskussion möglicher Gefahren im Zusammenhang mit DNS-Abfragen.
-
-Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfragen.
--->
 
 ---
 
