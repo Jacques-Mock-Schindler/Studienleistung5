@@ -68,32 +68,6 @@ Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sic
 Besprechen der Ausgabe des Befehls ping nzz.ch. Insbesondere ist darauf hinzuweisen, dass nzz.ch in 194.40.217.80 übersetzt wird.
 -->
 
-
----
-
-### URL zu IP-Adresse
-
-Die URL wird durch eine Anfrage auf einem Domain Name System Server in
-eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
-beobachten.
-
-```txt
-10	3.502537	192.168.124.106	9.9.9.9	DNS	70	Standard query 0xcf66 A www.nzz.ch
-```
-
-Die IP-Adresse 192.168.160.106 ruft die IP-Adresse 9.9.9.9 auf, um die
-IP-Adresse von www.nzz.ch abzufragen.  
-192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
-9.9.9.9 ist der DNS Server.
-
-<!--
-Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen.
-
-Die Besprechung des Resultates in der Packetlistenanzeige von Wireshark führt dann zur Diskussion der IPv4-Adressen und der DNS Anfrage auf den kommenden Folien.
-
-Trotz allfälliger Bedenken gegenüber dem Einsatz von Wireshark durch die SuS bin ich der Auffassung, dass die SuS unbedingt mit den richtigen Werkzeugen arbeiten sollen. Die Beschränkung auf Lernprogramme untergräbt die Glaubwürdigkeit der LP.
--->
-
 ---
 
 #### IP-Adresse
@@ -151,6 +125,34 @@ p {font-size: 12px}
 ![Übersicht NAT](../data/images/grafik_nat.png)
 
 Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 304.
+
+
+
+---
+
+### URL zu IP-Adresse
+
+Die URL wird durch eine Anfrage auf einem Domain Name System Server in
+eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
+beobachten.
+
+```txt
+10	3.502537	192.168.124.106	9.9.9.9	DNS	70	Standard query 0xcf66 A www.nzz.ch
+```
+
+Die IP-Adresse 192.168.160.106 ruft die IP-Adresse 9.9.9.9 auf, um die
+IP-Adresse von www.nzz.ch abzufragen.  
+192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
+9.9.9.9 ist der DNS Server.
+
+<!--
+Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen.
+
+Die Besprechung des Resultates in der Packetlistenanzeige von Wireshark führt dann zur Diskussion der IPv4-Adressen und der DNS Anfrage auf den kommenden Folien.
+
+Trotz allfälliger Bedenken gegenüber dem Einsatz von Wireshark durch die SuS bin ich der Auffassung, dass die SuS unbedingt mit den richtigen Werkzeugen arbeiten sollen. Die Beschränkung auf Lernprogramme untergräbt die Glaubwürdigkeit der LP.
+-->
+
 
 ---
 
