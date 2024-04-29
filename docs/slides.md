@@ -12,7 +12,34 @@ author: Jacques Mock Schindler
     section { justify-content: start; }
 </style>
 
+<style scoped>
+  h1 {color: white;
+      background-color: rgba(0, 0, 0, 0.35);
+      border-radius: 4px;
+      }
+section {
+  background-image: url('../data/images/telefonvermittlung.jpg'); /* Pfad zum Hintergrundbild */
+  background-size: cover; /* Stellt sicher, dass das Bild die ganze Folie bedeckt */
+  background-position: center; /* Zentriert das Bild */
+}
+.footer-text {
+  position: absolute;
+  bottom: 10px; /* Positionierung vom unteren Rand */
+  right: 10px; /* Positionierung vom rechten Rand */
+  background-color: rgba(0, 0, 0, 0.6); /* Semitransparenter schwarzer Hintergrund */
+  color: white; /* Weiße Textfarbe */
+  padding: 5px 10px; /* Innenabstand */
+  border-radius: 4px; /* Abgerundete Ecken */
+  font-size: 12pt; /* Kleinere Schriftgröße */
+}
+
+</style>
+
 # Einführung in TCP/IP
+
+<div class="footer-text">
+  Quelle: Museum für Kommunikation (https://bit.ly/3Qqu6Nk), besucht am 29. April 2024.
+</div>
 
 ---
 
@@ -26,11 +53,31 @@ Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend au
 
 ---
 
+<style scope>
+h2 {
+  position: absolute; /* Absolutes Positionieren innerhalb der section */
+  top: 0;             /* Setzt es an den oberen Rand der Folie */
+  width: 100%;
+  margin-top: 20px;   /* Optional: Abstand vom oberen Rand */
+
+}
+
+.content {
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+
 ## Aufruf einer Website am Beispiel der NZZ
 
+<div class="content">
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
 * Diese Frage wird im folgenden Schritt für Schritt beantwortet.
+</div>
 
 
 ---
@@ -60,10 +107,30 @@ Besprechen der Ausgabe des Befehls ping nzz.ch. Insbesondere ist darauf hinzuwei
 
 ---
 
+<style scope>
+h2 {
+  position: absolute; /* Absolutes Positionieren innerhalb der section */
+  top: 0;             /* Setzt es an den oberen Rand der Folie */
+  width: 100%;
+  margin-top: 20px;   /* Optional: Abstand vom oberen Rand */
+
+}
+
+.content {
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+
 #### IP-Adresse
 
+<div class="content">
 Die IP-Adresse ist eine eindeutige Nummer, unter welcher ein Computer im
 Internet erreichbar ist.
+</div>
 
 ---
 
@@ -103,9 +170,29 @@ An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die 
 
 ##### Exkurs Network Address Translation (NAT)
 
+<style scope>
+h2 {
+  position: absolute; /* Absolutes Positionieren innerhalb der section */
+  top: 0;             /* Setzt es an den oberen Rand der Folie */
+  width: 100%;
+  margin-top: 20px;   /* Optional: Abstand vom oberen Rand */
+
+}
+
+.content {
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+
+<div class="content">
 Damit die Kommunikation zwischen Computern mit einer öffentlichen und solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die private Adresse des lokalen Computers in die Adresse des Routers übersetzt. 
 
 Diese Übersetzung zwischen internen und externen IPv4 Adressen hat das Problem der knapper werdenden IPv4 Adressen entschärft.
+</div>
 
 <!--
 NAT soll nicht vertieft werden. Die kursorische Behandlung soll lediglich sicherstellen, dass der Übergang von einem Intranet ins Internet nachvollzogen werden kann.
@@ -152,9 +239,13 @@ Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
 
 #### Ein paar Gedanken zu den lokalen DNS-Einstellungen
 
-- Welche Reaktionszeit hat der DNS-Server?
-- Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
-- Schützt der DNS-Server meine Privatsphäre?
+
+
+
+* Welche Reaktionszeit hat der DNS-Server?
+* Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
+* Schützt der DNS-Server meine Privatsphäre?
+
 
 <!--
 Die SuS machen ein Ping gegen ihren DNS-Server sowie gegen 1.1.1.1 (Cloudflare), 8.8.8.8 (Google) oder 9.9.9.9 (Quad9).
@@ -168,6 +259,7 @@ Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfrag
 ---
 
 ## Beobachten des Netzwerkverkehrs mit Wireshark
+
 
 Um im Detail beobachten zu können, wie die Verbindung mit einer Website aufgebaut wird, wird in dieser Unterrichtseinheit der Netzwerkverkehr mit [Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
 
