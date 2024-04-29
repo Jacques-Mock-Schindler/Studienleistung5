@@ -292,7 +292,7 @@ Um im Detail beobachten zu können, wie die Verbindung mit einer Website aufgeba
 
 Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
 
-![Wireshark Logo](../data/images/wireshark-fin.png)
+
 ---
 
 
