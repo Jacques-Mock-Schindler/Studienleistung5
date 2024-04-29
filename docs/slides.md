@@ -170,10 +170,10 @@ Es gibt zwei Arten von IP-Adressen:
   255.255.255.255 dargestellt
 * IPv6  
   Diese (neueren) Adressen bestehen aus 128 Bits und werden hexadezimal
-  dargestellt. Eine IPv6 Adresse hat für die Darstellung das Format
+  dargestellt. Eine IPv6-Adresse hat für die Darstellung das Format
   2001:0db8:85a3:0000:0000:8a2e:0370:7344
   
-* Obwohl die Adressen im Adressraum von IPv4 Adressen knapp werden, ist
+* Obwohl die Adressen im Adressraum von IPv4-Adressen knapp werden, ist
   es aktuell immer noch die vorherrschende Form der Adressierung im Internet.
 
 <!--
