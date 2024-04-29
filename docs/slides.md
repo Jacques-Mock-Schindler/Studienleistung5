@@ -45,7 +45,34 @@ section {
 
 <!-- paginate: true -->
 
-![NZZ vom 24. Oktober 22](../data/images/nzz_anriss.png)
+<style scoped>
+
+  .image {
+  position: relative; /* oder 'absolute' je nach Bedarf */
+  z-index: 1;         /* Niedriger z-Index als der des Footers */
+}
+
+  .footer-text {
+  position: absolute;
+  bottom: 10px; /* Positionierung vom unteren Rand */
+  right: 10px; /* Positionierung vom rechten Rand */
+  background-color: rgba(0, 0, 0, 0.6); /* Semitransparenter schwarzer Hintergrund */
+  color: white; /* Weiße Textfarbe */
+  padding: 5px 10px; /* Innenabstand */
+  border-radius: 4px; /* Abgerundete Ecken */
+  font-size: 12pt; /* Kleinere Schriftgröße */
+  z-index: 1000; /*je höher der z-index, desto weiter im Vordergrund*/
+}
+</style>
+
+
+![Artikel NZZ](../data/images/nzz_anriss.png){ .image }
+
+
+
+<div class="footer-text">
+Quelle: Sander, Matthias. «Wie China unter Xi das Internet kontrolliert». NZZ, 24. Oktober 2022, Abschn. Technologie. https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-kontrolliert-ld.1708411.
+</div>
 
 <!--
 Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend auf Fragen zum Artikel kann dann in das Thema TCP/IP eingeführt werden.
