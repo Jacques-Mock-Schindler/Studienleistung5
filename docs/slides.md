@@ -26,7 +26,7 @@ Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend au
 
 ---
 
-## Was es braucht, um die Website der NZZ aufzurufen
+## Aufruf einer Website am Beispiel der NZZ
 
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
@@ -79,8 +79,8 @@ Es gibt zwei Arten von IP-Adressen:
   dargestellt. Eine IPv6 Adresse hat für die Darstellung das Format
   2001:0db8:85a3:0000:0000:8a2e:0370:7344
   
-* Obwohl der Adressraum von IPv4 Adressen knapp wird, ist es aktuell
-  immer noch die vorherrschende Form der Adressierung im Internet.
+* Obwohl die Adressen im Adressraum von IPv4 Adressen knapp werden, ist
+  es aktuell immer noch die vorherrschende Form der Adressierung im Internet.
 
 <!--
 An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die Anzahl verfügbarer Adressen und den Bedarf an verfügbaren Adressen zu sprechen.
@@ -103,10 +103,9 @@ An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die 
 
 ##### Exkurs Network Address Translation (NAT)
 
-Damit die Kommunikation zwischen Computern mit einer öffentlichen und
-solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die
-private Adresse des lokalen Computers in die Adresse des Routers
-übersetzt. 
+Damit die Kommunikation zwischen Computern mit einer öffentlichen und solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die private Adresse des lokalen Computers in die Adresse des Routers übersetzt. 
+
+Diese Übersetzung zwischen internen und externen IPv4 Adressen hat das Problem der knapper werdenden IPv4 Adressen entschärft.
 
 <!--
 NAT soll nicht vertieft werden. Die kursorische Behandlung soll lediglich sicherstellen, dass der Übergang von einem Intranet ins Internet nachvollzogen werden kann.
@@ -127,23 +126,19 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ### Domain Name System (DNS)
 
-Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch
-gehörige IP-Adresse gefunden werden.  
+Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch gehörige IP-Adresse gefunden werden.  
 
 Dieser Vorgang wird als Namensauflösung (*name resolution*) bezeichnet.  
 
-Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank
-mit dem Namen *Domain Name System (DNS)*.
+Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank mit dem Namen *Domain Name System (DNS)*.
 
 ---
 
 ### Domain Name System (DNS)
 
-Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen
-Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
+Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
 
-Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen
-Computers (Netzwerk und Internet > Netzwerkzugang > Eigenschaften > DNS-Server).  
+Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen Computers (Netzwerk und Internet > Netzwerkzugang > Eigenschaften > DNS-Server).  
 
 ![DNS-Server](../data/images/bild_ip_dns-server.png)
 
@@ -174,9 +169,7 @@ Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfrag
 
 ## Beobachten des Netzwerkverkehrs mit Wireshark
 
-Um im Detail beobachten zu können, wie die Verbindung mit einer Website
-aufgebaut wird, wird in dieser Unterrichtseinheit der Netzwerkverkehr mit
-[Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
+Um im Detail beobachten zu können, wie die Verbindung mit einer Website aufgebaut wird, wird in dieser Unterrichtseinheit der Netzwerkverkehr mit [Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
 
 Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
 
@@ -191,7 +184,7 @@ Die URL wird durch eine Anfrage auf einem Domain Name System Server in eine IP-A
 No. Time      Src            Dst      Prot length  Info 
 1   0.000000  192.168.1.107  9.9.9.9  DNS  66      Standard query 0x007a A nzz.ch
 ```
-* Die IP-Adresse 192.168.1.107 ruft die IP-Adresse 9.9.9.9 auf, um die IP-Adresse von www.nzz.ch abzufragen.  
+* Von der IP-Adresse 192.168.1.107 wird die IP-Adresse 9.9.9.9 aufgerufen, um die IP-Adresse von www.nzz.ch abzufragen.  
 * 192.168.1.101 ist der Rechner, der Versucht www.nzz.ch aufzurufen. 9.9.9.9 ist der DNS Server.
 
 <!--
@@ -212,11 +205,9 @@ Wie sieht das DNS-Anfrage Packet aus?
 
 
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
-Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt
-von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die
-eigentliche Anfrage kommt.  
-Auf der folgenden Folie findet sich eine schematische Darstellung einer
-solchen DNS Anfrage.
+Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die eigentliche Anfrage kommt.  
+
+Auf der folgenden Folie findet sich eine schematische Darstellung einer solchen DNS Anfrage.
 
 ---
 
@@ -243,8 +234,8 @@ Domain Name System (query)
 
 ```
 
-0. Zusammenfassung des Paketes (Abgeschnitten)
-1. Network Access Layer
+0. Zusammenfassung des Paketes (abgeschnitten)
+1. Network Access Layer (abgeschnitten)
 2. Internet Layer
 3. Transport Layer
 4. Application Layer (um den geht es)
@@ -392,4 +383,3 @@ Mit dem Filter ip==194.40.217.80 kann der Three-Way Handshake für die TCP Verbi
 Damit ist nachvollziehbar dargelegt, wie die Verbindung zu einer gegebenen Website aufgebaut wird.
 -->
 
----
