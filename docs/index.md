@@ -66,7 +66,7 @@ zu vermittelnden theoretischen Grundlagen ist ein Lehrgespräch zu
 führen, die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
 Einzelarbeit durchgeführt werden.
 
-## Aufgaben
+## Aufgaben mit Lösungen
 
 ### Sensibilisierungsaufgabe
 
@@ -434,16 +434,3 @@ Handshake hochgezählt.
 Damit ist die Verbindung zur Website www.nzz.ch hergestellt.
 
 
-
-## Grobkonzept
-
-- IP Adressen
-- OSI Modell / TCP/IP Modell
-- NAT Protokoll
-- Paketanalyse
-
-## Domain Name System
-
-Wie wird eine Textbasierte `url` in eine IP-Adresse aufgelöst?
-
-Durch DNS-Server. Diese haben fixe IP-Adressen.
