@@ -1,19 +1,26 @@
 # Computernetzwerke
 
 Computernetzwerke ermöglichen die Kommunikation zwischen verschiedenen
-Computern. Dies hat neben einem technischen auch einen
-gesellschaftlichen Aspekt. Den Gesellschaftlichen Aspekt kann man am
-Arabischen Frühling, der Ende 2010 begonnen hat und mit dem Beginn des
-Bürgerkrieges in Syrien 2011 mehrheitlich zu einem Stillstand gekommen
-ist, zeigen. Das Internet hat mit seinen Kommunikationskanälen die
-Organisation der entsprechenden Proteste erst ermöglicht. Ein anderes
-Beispiel für die gesellschaftliche Bedeutung von Computernetzwerken ist
-aktuell Starlink. Dieses Netzwerk ermöglicht es, in Ländern mit starker
-Zensur unter Umgehung von behördlichen Zugangsbeschränkungen
-Informationen auszutauschen.
+Computern. In der hier beschriebenen Unterrichtseinheit soll für
+Schülerinnen und Schüler nachvollziehbar gezeigt werden, wie diese
+Kommunikation auf der Ebene des Verbindungsaufbaus funktioniert. Dies
+ist eine sehr technische und abstrakte Betrachtungsweise. Deshalb soll
+auch auf die gesellschaftlichen Folgen der Kommunikation zwischen
+Computern hingewiesen werden.
 
-Dies sind meines Erachtens gesellschaftliche Gründe, sich mit den
-technischen Aspekten von Computernetzwerken auseinanderzusetzen.  
+In gesellschaftlicher Hinsicht ermöglicht die Kommunikation mit Hilfe
+von Computernetzwerken einerseits den freien Austausch von Ideen rund um
+die ganze Welt. Sie ermöglicht es auch, dass gesellschaftliche
+Strömungen politische Wirkung entfalten können. Ein Beispiel für eine
+solche politische Wirkung ist der Arabische Frühling, der Ende 2010
+begonnen hat. Zwar ist die Bedeutung computergestützter Kommunikation
+für den Arabischen Frühling nicht restlos geklärt, sicher ist aber, dass die
+politischen Ereignisse durch Social Media begünstigt worden sind[^1].
+Umgekehrt erlauben die technischen Eigenheiten computergestützter
+Kommunikation auch Zensurmassnahmen in noch nie dagewesenem Ausmass.
+
+Die vorliegende Unterrichtseinheit wird daher mit einem Zeitungsartikel
+zur Great Firewall[^2] eingeleitet werden.
 
 ## Motivation
 
@@ -434,3 +441,11 @@ Handshake hochgezählt.
 Damit ist die Verbindung zur Website www.nzz.ch hergestellt.
 
 
+---
+
+[^1]: Wikipedia: Social media's role in the Arab Spring,
+    https://en.wikipedia.org/wiki/Social_media%27s_role_in_the_Arab_Spring,
+    besucht am 2. Mai 2024.
+
+[^2]: Wikipdia: Great Firewall,
+    https://en.wikipedia.org/wiki/Great_Firewall, besucht am 2. Mai 2024.
