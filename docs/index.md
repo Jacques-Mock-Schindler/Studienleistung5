@@ -22,14 +22,26 @@ Kommunikation auch Zensurmassnahmen in noch nie dagewesenem Ausmass.
 Die vorliegende Unterrichtseinheit wird daher mit einem Zeitungsartikel
 zur Great Firewall[^2] eingeleitet werden.
 
-## Motivation
+Mit diesem Hinweis auf die gesellschaftliche Bedeutung
+computergestützter Kommunikation soll die Motivation für die
+Auseinandersetzung mit ihrer technischen Umsetzung geschaffen werde. Ich
+erhoffe mir so nicht zu Letzt auch SuS abzuholen, die sich nicht
+besonders für technische Konzepte interessieren.
 
-Zum Einstieg ins Thema wird den Schülerinnen und Schüler ein Artikel mit
-dem Titel "Wie China unter Xi das Internet kontrolliert" aus der NZZ vom
-24\. Oktober 2022 vorgestellt.  
-Daraus ergibt sich die Fragestellung, wie die Verbindungen zwischen
-Computern im Internet bewerkstelligt werden. Dies führt zur Besprechung
-der IP Adressen und so zum TCP/IP Protokoll.
+## Lernziele
+
+Mit der vorliegenden Unterrichtseinheit soll erreicht werden, dass die SuS
+
+- die Funktion von IP-Adressen erklären;
+- die Aufgabe eines DNS-Servers im Zusammenhang mit dem
+  Verbindungsaufbau zwischen einem Computer in einem lokalen Netzwerk
+  und einer Website im Internet nachvollziehen;
+- den Three-Way Handshake beim Aufbau der Verbindung zwischen Server und
+  Client erläutern sowie 
+- unter Anleitung Wireshark als Werkzeug für einfache Paketanalysen
+  einsetzen
+
+können. 
 
 ## Vorausgesetzte Vorkenntnisse
 
@@ -39,17 +51,7 @@ Die SuS
 - kennen die Grundzüge der Vergabe von Internetdomains sowie
 - das OSI- bzw. IP-Layer-Modell.
 
-## Lernziele
 
-Die SuS können
-
-- die Aufgabe eines DNS-Servers im Zusammenhang mit dem
-  Verbindungsaufbau zwischen einem Computer in einem lokalen Netzwerk
-  und einer Website im Internet sowie
-- den Three-Way Handshake beim Aufbau der Verbindung zwischen Server und
-  Client erläutern. Ausserdem können sie
-- unter Anleitung Wireshark als Werkzeug für einfache Paketanalysen
-  einsetzen. 
 
 
 ## Erforderliche Software bzw. Vorbereitung
