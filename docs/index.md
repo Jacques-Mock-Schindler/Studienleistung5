@@ -498,9 +498,9 @@ Domain Name System (response)
 Die Transaction ID stimmt mit jener der Anfrage überein, also handelt es
 sich um das Paket, das zur Anfrage gehört.
 
-Das Bit mit dem Antwortflag ist auf 1 gesetzt, es ist die Antwort.
+Das Bit mit dem Antwort-Flag ist auf 1 gesetzt, es ist die Antwort.
 
-Der Errorcode ist 0, die Antwort ist ohne Fehler erfolgt.
+Der Error-Code ist 0, die Antwort ist ohne Fehler erfolgt.
 
 Die Antwort lautet der Server der NZZ hat die IPv4-Adresse
 194.40.217.80.
