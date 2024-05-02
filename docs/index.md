@@ -103,7 +103,9 @@ und Dateien verwendet:
 - ping_nzz.pcapng 
 - dns_anfrage_nzz.pcapng
 - handshake_nzz.pcapng
-- kariertes Notizpapier (vorzugsweise 5mm, von den SuS selber mitzubringen)
+- kariertes Notizpapier (vorzugsweise 5mm, von den SuS selber
+  mitzubringen)
+- Präsentation (slides.html)
 
 ## Aufgaben mit Lösungen
 
@@ -179,6 +181,8 @@ Wann gehen uns die IP-Adressen aus?
 Berechnen Sie, wie viele IPv4-Adressen grundsätzlich zur
 Verfügung stehen.
 
+*Musterlösung*
+
 $$
 11111111\ 11111111\ 11111111\ 11111111_B = 2^{32} = 4'294'967'296_D
 $$
@@ -186,11 +190,13 @@ $$
 Berechnen Sie, wie viele IPv6-Adressen grundsätzlich zur Verfügung
 stehen. 
 
+*Musterlösung*
+
 $$
 2^{128}
 $$
 
-Anschliessend an die Berechnung kann kursorisch auf das NAT Protkoll
+Anschliessend an die Berechnung kann kursorisch auf das NAT Protokoll
 eingegangen werden. Damit soll nur gezeigt werden, dass auch IPv4 mehr
 als $2^{32}$ Adressen ermöglicht.
 
@@ -209,7 +215,7 @@ Wichtig ist darauf hinzuweisen, dass eine unverschlüsselte DNS-Abfrage
 ein Risiko darstellt. Die im Screenshot dargestellte Lösung ist das
 Resultat der Verwendung von `Cisco AnyConnect Secure Mobility Client`.
 Gewisse Unternehmen (zB. die
-UNI Fribourg) verlangen dessen Verwendung als VPN Client .
+UNI Fribourg) verlangen dessen Verwendung als VPN Client.
 Dieser führt dazu, dass in der Registry ein Eintrag vorgenommen wird,
 welcher die Verwendung von https für die DNS-Anfrage verhindert.
 
@@ -233,6 +239,15 @@ schon installiert ist, entfällt diese Aufgabe.
 5. nzz.ch aufrufen
 6. Aufzeichnung anhalten 
 7. Aufzeichnung speichern
+
+*Anmerkung:*
+
+Eine Besprechung erübrigt sich hier grundsätzlich. Die so erstellte
+Datei bildet lediglich die Grundlage für die kommenden Aufgaben.
+
+Falls man sich auf die Analyse der Pakete konzentrieren will, ohne Zeit
+für das herausfiltern der relevanten Pakete zu verbrauchen, kann auf die
+mitgelieferten bereites gefilterten Wireshark-Dateien abgestellt werden.
 
 ### Suche nach der DNS-Anfrage für nzz.ch
 
