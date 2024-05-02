@@ -89,6 +89,11 @@ Einsatz viel zu viele Funktionen aufweist. Dies wird in den geplanten
 Aufgaben allerdings dadurch aufgefangen, dass die SuS beim Einsatz von
 Wireshark sehr eng geführt werden.
 
+Die Aufgaben können unterschiedlich detailliert gelöst werden. Der
+Detaillierungsgrad der Bearbeitung ermöglicht es, besonders
+interessierten SuS oder auch speziell engagierten Klassen die
+Gelegenheit zur Vertiefung zu bieten.
+
 ## Aufgaben mit Lösungen
 
 ### Sensibilisierungsaufgabe
