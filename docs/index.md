@@ -41,7 +41,7 @@ Die SuS können
   und einer Website im Internet sowie
 - den Three-Way Handshake beim Aufbau der Verbindung zwischen Server und
   Client erläutern. Ausserdem können sie
-- unter Anleitung Wireshark als Werkzeug für einfache Netzwerkanalysen
+- unter Anleitung Wireshark als Werkzeug für einfache Paketanalysen
   einsetzen. 
 
 
@@ -65,7 +65,9 @@ Zum Einstieg ins Thema wird der Artikel
 [«Wie China unter Xi das Internet
 kontrolliert»](https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-kontrolliert-ld.1708411)
 aus der NZZ vom 24. Oktober 2022 gelesen (der Text findet sich als PDF
-in den Unterlagen). Bei der Besprechung soll dann insbesondere auf den
+in den Unterlagen).
+
+Bei der Besprechung soll dann insbesondere auf den
 Abschnitt 
 
 >Die Regierung kann bestimmte URL sperren, etwa nzz.ch, die wie jene
@@ -82,24 +84,38 @@ im letzten Drittel des Artikels hingewiesen werden.
 Aus diesem Abschnitt ergibt sich die Frage, wie der Aufbau einer
 Verbindung zu einer bestimmten Website im Detail abläuft.
 
-### Aufzeichnung der DNS-Abfrage
+### Experiment 1: ping nzz.ch
 
 1. Terminal öffnen
 2. Wireshark öffnen
-3. Aufzeichnung starten
-4. nzz.ch pingen
-5. Aufzeichnung anhalten 
-6. Anzeigefilter dns setzten
+3. Zutreffende Schnittstelle (wahrscheinlich WLAN) auswählen
+4. Aufzeichnung starten
+5. nzz.ch pingen
+6. Aufzeichnung anhalten 
+7. Anzeigefilter dns setzten
 
-Das ergibt eine Zusammenfassung, die im Wesentlichen folgendermassen aussieht:
+Das ergibt eine Zusammenfassung, die im Wesentlichen folgendermassen
+aussieht (die entsprechend gefilterte 
+[Wireshark-Datei](../data/wireshark/ping_nzz.pcapng)
+sich in der Dateiablage):
 
 ```txt
-No.  Time      Source           Destination      Protocol  Length  Info
-13   6.313849  10.134.61.184    193.135.142.246  DNS       56      Standard query 0x9e0b A www.nzz.ch
-14   6.371778  193.135.142.246  10.134.61.184    DNS       72      Standard query response 0x9e0b A www.nzz.ch A 194.40.217.80
+Source           Destination      Protocol  Length  Info
+10.134.61.184    193.135.142.246  DNS       56      Standard query 0x9e0b A www.nzz.ch
+193.135.142.246  10.134.61.184    DNS       72      Standard query response 0x9e0b A www.nzz.ch A 194.40.217.80
 ```
 
-Basierend auf dieser Zusammenfassung kann das Mapping von URL nach der
+*Auswertung (Besprechung):*
+
+Für die Darstellung wurde die Paketnummer und die Zeit abgeschnitten.  
+
+Für eine erste Auswertung wird nur besprochen, was hier zu sehen ist.
+
+Das erste Paket wurde von einem Computer mit der IP-Adresse
+10.134.61.184 an einen Computer mit der IP-Adresse 193.135.142.246
+verschickt. Das verwendete Protokoll ist *DNS* und das Paket beinhaltet
+eine Anfrage. Basierend auf dieser Zusammenfassung kann das Mapping von
+URL nach der
 IP-Adresse besprochen werden.  
 Gleichzeitig bietet die Zusammenfassung die Möglichkeit, auf die
 verschiedenen DNS-Server einzugehen und Charakteristika verschiedener
