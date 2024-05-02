@@ -134,6 +134,27 @@ Daraus ergeben sich die folgenden beiden Fragen:
 - Was ist eine IP-Adresse?
 - Woher kommt die IP-Adresse für nzz.ch?
 
+### IP-Adressen
+
+Wann gehen uns die IP-Adressen aus?  
+Berechnen Sie, wie viele IPv4-Adressen grundsätzlich zur
+Verfügung stehen.
+
+$$
+11111111\ 11111111\ 11111111\ 11111111_B = 2^{32} = 4'294'967'296_D
+$$
+
+Berechnen Sie, wie viele IPv6-Adressen grundsätzlich zur Verfügung
+stehen. 
+
+$$
+2^{128}
+$$
+
+Anschliessend an die Berechnung kann kursorisch auf das NAT Protkoll
+eingegangen werden. Damit soll nur gezeigt werden, dass auch IPv4 mehr
+als $2^{32}$ Adressen ermöglicht.
+
 ### Kontrolle der eigenen DNS-Einstellungen
 
 1. Einstellungen öffnen (Windows > Einstellungen)
@@ -415,60 +436,6 @@ Damit ist die Verbindung zur Website www.nzz.ch hergestellt.
 
 
 
-
-
-Das ergibt eine Zusammenfassung, die im Wesentlichen folgendermassen
-aussieht (die entsprechend gefilterte 
-[Wireshark-Datei](../data/wireshark/ping_nzz.pcapng)
-sich in der Dateiablage):
-
-```txt
-Source           Destination      Protocol  Length  Info
-10.134.61.184    193.135.142.246  DNS       56      Standard query 0x9e0b A www.nzz.ch
-193.135.142.246  10.134.61.184    DNS       72      Standard query response 0x9e0b A www.nzz.ch A 194.40.217.80
-```
-
-*Auswertung (Besprechung):*
-
-Für die Darstellung wurde die Paketnummer und die Zeit abgeschnitten.  
-
-Für eine erste Auswertung wird nur besprochen, was hier zu sehen ist.
-
-Das erste Paket wurde von einem Computer mit der IP-Adresse
-10.134.61.184 an einen Computer mit der IP-Adresse 193.135.142.246
-verschickt. Das verwendete Protokoll ist *DNS* und das Paket beinhaltet
-eine Anfrage. Basierend auf dieser Zusammenfassung kann das Mapping von
-URL nach der
-IP-Adresse besprochen werden.  
-Gleichzeitig bietet die Zusammenfassung die Möglichkeit, auf die
-verschiedenen DNS-Server einzugehen und Charakteristika verschiedener
-Anbieter zu besprechen. In der vorliegenden Beispielzusammenfassung
-wurde die Verbindung zum Internet mit einem Mobilfunk Modem hergestellt.
-Der DNS-Server ist deshalb der voreingestellte Server der Swisscom.  
-Man kann an dieser Stelle allerdings auch auf die Netzwerkeinstellungen
-im allgemeinen eingehen und den SuS zeigen, wie diese gegebenenfalls
-anzupassen wären.
-
-### IP-Adressen
-
-Wann gehen uns die IP-Adressen aus?  
-Berechnen Sie, wie viele IPv4-Adressen grundsätzlich zur
-Verfügung stehen.
-
-$$
-11111111\ 11111111\ 11111111\ 11111111_B = 2^{32} = 4'294'967'296_D
-$$
-
-Berechnen Sie, wie viele IPv6-Adressen grundsätzlich zur Verfügung
-stehen. 
-
-$$
-2^{128}
-$$
-
-Anschliessend an die Berechnung kann kursorisch auf das NAT Protkoll
-eingegangen werden. Damit soll nur gezeigt werden, dass auch IPv4 mehr
-als $2^{32}$ Adressen ermöglicht.
 
 ### Analyse der DNS-Anfrage (Überblick)
 
