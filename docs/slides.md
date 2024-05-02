@@ -35,7 +35,7 @@ section {
 
 </style>
 
-# Einführung in TCP/IP
+# Verbindungsaufbau zu einer Website
 
 <div class="footer-text">
   Quelle: Museum für Kommunikation (https://bit.ly/3Qqu6Nk), besucht am 29. April 2024.
