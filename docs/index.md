@@ -336,6 +336,60 @@ Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
 | 01101000 | h |
 
 
+### Die DNS-Antwort für nzz.ch
+
+1. Auswahl des Antwortpakets
+2. Maximale Ausfaltung der untersten Zeile
+
+Daraus ergibt sich die folgende Ansicht:
+
+```txt
+Frame 2: ...
+Ethernet II, ...
+Internet Protocol Version 4, Src: 9.9.9.9, Dst: 192.168.1.107
+User Datagram Protocol, Src Port: 53, Dst Port: 57802
+Domain Name System (response)
+    Transaction ID: 0x3a4c
+    Flags: 0x8180 Standard query response, No error
+        1... .... .... .... = Response: Message is a response
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... .0.. .... .... = Authoritative: Server is not an authority for domain
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... 1... .... = Recursion available: Server can do recursive queries
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+        .... .... .... 0000 = Reply code: No error (0)
+    Questions: 1
+    Answer RRs: 1
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        www.nzz.ch: type A, class IN
+            Name: www.nzz.ch
+            [Name Length: 10]
+            [Label Count: 3]
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+    Answers
+    [Request In: 1]
+    [Time: 0.005354000 seconds]
+
+```
+
+*Auswertung (Besprechung):*
+
+Die Transaction ID stimmt mit jener der Anfrage überein, also handelt es
+sich um das Paket, das zur Anfrage gehört.
+
+Das Bit mit dem Antwortflag ist auf 1 gesetzt, es ist die Antwort.
+
+Der Errorcode ist 0, die Antwort ist ohne Fehler erfolgt.
+
+Die Antwort lautet der Server der NZZ hat die IPv4-Adresse
+194.40.217.80.
+
 
 
 
