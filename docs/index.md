@@ -100,6 +100,7 @@ und Dateien verwendet:
 
 - Wie China unter Xi das Internet kontrolliert, NZZ vom 24. Oktober 2022
   (PDF)
+- ascii-table.pdf
 - ping_nzz.pcapng 
 - dns_anfrage_nzz.pcapng
 - handshake_nzz.pcapng
@@ -251,11 +252,12 @@ mitgelieferten bereites gefilterten Wireshark-Dateien abgestellt werden.
 
 ### Suche nach der DNS-Anfrage für nzz.ch
 
+(*dns_anfrage_nzz.pcapng*)
+
 1. Anzeigefilter `dns.qry.name == "www.nzz.ch" setzten
 2. Anfrage auswählen
 
-Die [Zusammenfassung](../data/wireshark/aufruf_nzz.pcapng)
-sieht im wesentlichen folgendermassen aus:
+Die Zusammenfassung sieht im wesentlichen folgendermassen aus: 
 
 ```txt
 Frame 1: 70 bytes on wire (560 bits), ...
@@ -272,7 +274,8 @@ darstellerischen Gründen wurde der Inhalt abgeschnitten.
 
 Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer Modells.
 Der Network Access Layer gibt Auskunft, wie physikalisch die Verbindung
-zum Internet hergestellt wird.
+zum Internet hergestellt wird. Dies ist nicht Gegenstand der
+vorliegenden Aufgabe.
 
 Die dritte Zeile entspricht dem Network Layer. Auf diesem Layer sieht
 man, welche IP-Adressen miteinander kommunizieren.
@@ -285,9 +288,12 @@ ausserhalb der sog.
 ports"](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports)
 gewählt.
 
-Die letzte Zeile fasst die eigentliche DNS Anfrage zusammen.
+Die letzte Zeile fasst die eigentliche DNS Anfrage zusammen. Die
+detaillierte Besprechung erfolgt in der nächsten Aufgabe.
 
 ### Die DNS-Anfrage für nzz.ch im Detail
+
+(*dns_anfrage_nzz.pcapng, ascii-table.pdf*)
 
 - maximale Auffaltung der letzten Zeile
 
@@ -331,9 +337,13 @@ beziehungsweise in hexadezimaler Darstellung:
 
 *Auswertung (Besprechung):*
 
-Die hexadezimale Darstellung entspricht im Umfang der Kopie des
-Textauszugs. Die hexadezimale Darstellung wird dazu verwendet, um
-nachzuvollziehen, wie die Anfrage der schematischen Darstellung aus
+Die Codierung als Binärcode kann auf kariertem Papier erfolgen. Dies
+ermöglicht die Darstellung in einer 16 Spalten breiten Tabelle. Die
+Tabelle kann dann Zeile für Zeile kommentiert werden.
+
+Die hexadezimale Darstellung wurde so ausgewählt, dass sie im Umfang der
+ausgefalteten Textdarstellung entspricht. Sie wird dazu verwendet,
+nachzuvollziehen, wie die Anfrage der schematischen Darstellung aus 
 Fall, Kevin R., und W. Richard Stevens, TCP/IP illustrated, volume 1:
 The Protocols, 2nd ed., Addison-Wesley professional computing series, 
 Upper Saddle River, NJ: Addison-Wesley, 2012, p. 521, entspricht.
@@ -353,8 +363,9 @@ $$
 0x0100 = 0b0000000100000000
 $$
 
-Einzelne Bits sind hier nicht gesetzt, weshalb eine Null eingesetzt
-wurde. So sind es genau 16 Bits.
+Einzelne Bits sind hier nicht gesetzt (zu erkennen an den Punkten in der
+Textdarstellung), weshalb eine Null eingesetzt wurde. So sind es genau
+16 Bits.
 
 Die Zeile mit dem Fragezähler hat den Wert 1 was
 
@@ -411,7 +422,29 @@ Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
 | 01101000 | h |
 
 
+Die ganze Anfrage, beginnend bei der Transaction ID in sieht in
+Binärcodierung folgendermassen aus:
+
+```txt
+00111010 01001100
+00000001 00000000
+00000000 00000001
+00000000 00000000
+00000000 00000000
+00000000 00000000 
+00000011 01110111 
+01110111 01110111 
+00000011 01101110 
+01111010 01111010 
+00000010 01100011 
+01101000 00000000 
+00000000 00000001 
+00000000 00000001 
+```
+
 ### Die DNS-Antwort für nzz.ch
+
+(*dns_anfrage_nzz.pcapng*)
 
 1. Auswahl des Antwortpakets
 2. Maximale Ausfaltung der untersten Zeile
@@ -448,6 +481,13 @@ Domain Name System (response)
             Type: A (1) (Host Address)
             Class: IN (0x0001)
     Answers
+        www.nzz.ch: type A, class IN, addr 194.40.217.80
+            Name: www.nzz.ch
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+            Time to live: 300 (5 minutes)
+            Data length: 4
+            Address: 194.40.217.80
     [Request In: 1]
     [Time: 0.005354000 seconds]
 
