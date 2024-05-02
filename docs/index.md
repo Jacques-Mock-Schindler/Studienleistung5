@@ -86,6 +86,48 @@ Verbindung zu einer bestimmten Website im Detail abläuft.
 
 ### Experiment 1: ping nzz.ch
 
+*Anweisungen:*
+
+1. Terminal öffnen
+2. ping nzz.ch
+3. Besprechung der Ausgabe
+
+Die Anzeige im Terminal der SuS sieht nach dem `ping` im Wesentlichen
+folgendermassen aus:
+
+```txt
+Ping wird ausgeführt für nzz.ch [194.40.217.80] mit 32 Bytes Daten:
+Antwort von 194.40.217.80: Bytes=32 Zeit=7ms TTL=55
+Antwort von 194.40.217.80: Bytes=32 Zeit=6ms TTL=55
+Antwort von 194.40.217.80: Bytes=32 Zeit=9ms TTL=55
+Antwort von 194.40.217.80: Bytes=32 Zeit=9ms TTL=55
+
+Ping-Statistik für 194.40.217.80:
+    Pakete: Gesendet = 4, Empfangen = 4, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 6ms, Maximum = 9ms, Mittelwert = 7ms
+```
+
+*Auswertung (Besprechung):*
+
+Für eine erste Auswertung wird nur Beschrieben, was in der Ausgabe zu
+sehen ist.
+
+Dem Server nzz.ch wird ein Datenpaket im Umfang von 32 Bytes geschickt.
+Der Server nzz.ch hat offensichtlich eine zahlenbasierte Adresse
+`[194.40.217.80]`. Es wurden insgesamt 4 Pakete verschickt und keines
+ist verlorengegangen. Die Reaktionszeit lag zwischen 6 und 9ms (7.75ms
+im Mittel; die Berechnung wurde trunkiert).
+
+Daraus ergeben sich die folgenden beiden Fragen:
+
+- Was ist eine IP-Adresse?
+- Woher kommt die IP-Adresse für nzz.ch?
+
+
+### Aufzeichnung ping nzz.ch
+
 1. Terminal öffnen
 2. Wireshark öffnen
 3. Zutreffende Schnittstelle (wahrscheinlich WLAN) auswählen
