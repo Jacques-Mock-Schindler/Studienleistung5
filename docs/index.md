@@ -390,8 +390,27 @@ Der Errorcode ist 0, die Antwort ist ohne Fehler erfolgt.
 Die Antwort lautet der Server der NZZ hat die IPv4-Adresse
 194.40.217.80.
 
+### Three-Way Handshake
 
+1. Filter ip.addr == 194.40.217.80
+2. Absolute Sequenznummern einstellen (Einstellungen > Protokolle > TCP
+   \> Kontrollkästchen "relative Sequenznummern" deaktivieren)
+3. Suche nach Paketen mit dem Flag [SYN] bzw. [ACK]
 
+Reduziert ergibt sich daraus das folgende Bild:
+
+```txt
+192.168.1.107	194.40.217.80	TCP	66	55531 → 443 [SYN] Seq=2234328046 ...
+194.40.217.80	192.168.1.107	TCP	66	443 → 55531 [SYN, ACK] Seq=657467626 Ack=2234328047 ...
+192.168.1.107	194.40.217.80	TCP	54	55531 → 443 [ACK] Seq=2234328047 Ack=657467627 ...
+```
+
+*Auswertung (Besprechung):*
+
+Die Sequenznummern werden tatsächlich gemäss dem Schema des Three-Way
+Handshake hochgezählt.
+
+Damit ist die Verbindung zur Website www.nzz.ch hergestellt.
 
 
 
