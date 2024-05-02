@@ -79,6 +79,16 @@ zu vermittelnden theoretischen Grundlagen ist ein Lehrgespräch zu
 führen, die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
 Einzelarbeit durchgeführt werden.
 
+Im Unterricht wird man von Seiten der SuS gelegentlich mit dem Vorwurf
+konfrontiert, dass die im Unterricht zur Anwendung kommenden Methoden im
+richtigen Leben nicht verwendet würden. Aus diesem Grund wird mit echten
+Werkezeugen wie Wireshark gearbeitet und darauf verzichtet
+unterrichtsspezifische Software einzusetzen.  
+Dies im vollen Bewusstsein, dass Wireshark für den hier geplanten
+Einsatz viel zu viele Funktionen aufweist. Dies wird in den geplanten
+Aufgaben allerdings dadurch aufgefangen, dass die SuS beim Einsatz von
+Wireshark sehr eng geführt werden.
+
 ## Aufgaben mit Lösungen
 
 ### Sensibilisierungsaufgabe
