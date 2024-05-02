@@ -153,16 +153,196 @@ UNI Fribourg) verlangen dessen Verwendung als VPN Client .
 Dieser führt dazu, dass in der Registry ein Eintrag vorgenommen wird,
 welcher die Verwendung von https für die DNS-Anfrage verhindert.
 
+### Installation von Wireshark
 
-### Aufzeichnung ping nzz.ch
+1. Herunterladen des Installers
+2. Installieren von Wireshark
 
-1. Terminal öffnen
-2. Wireshark öffnen
-3. Zutreffende Schnittstelle (wahrscheinlich WLAN) auswählen
-4. Aufzeichnung starten
-5. nzz.ch pingen
+*Anmerkung:*
+
+Wireshark ist für die kommenden Aufgaben erforderlich. Falls Wireshark
+schon installiert ist, entfällt diese Aufgabe.
+
+
+### Aufzeichnung des Aufrufs von nzz.ch
+
+1. Wireshark öffnen
+2. Zutreffende Schnittstelle (wahrscheinlich WLAN) auswählen
+3. Aufzeichnung starten
+4. Browser öffnen
+5. nzz.ch aufrufen
 6. Aufzeichnung anhalten 
-7. Anzeigefilter dns setzten
+7. Aufzeichnung speichern
+
+### Suche nach der DNS-Anfrage für nzz.ch
+
+1. Anzeigefilter `dns.qry.name == "www.nzz.ch" setzten
+2. Anfrage auswählen
+
+Die [Zusammenfassung](../data/wireshark/aufruf_nzz.pcapng)
+sieht im wesentlichen folgendermassen aus:
+
+```txt
+Frame 1: 70 bytes on wire (560 bits), ...
+Ethernet II, ...
+Internet Protocol Version 4, Src: 192.168.1.107, Dst: 9.9.9.9
+User Datagram Protocol, Src Port: 57802, Dst Port: 53
+Domain Name System (query)
+```
+
+*Auswertung (Besprechung):*
+
+Die erste Zeile gibt eine Zusammenfassung des ausgewählten Paketes. Aus
+darstellerischen Gründen wurde der Inhalt abgeschnitten.
+
+Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer Modells.
+Der Network Access Layer gibt Auskunft, wie physikalisch die Verbindung
+zum Internet hergestellt wird.
+
+Die dritte Zeile entspricht dem Network Layer. Auf diesem Layer sieht
+man, welche IP-Adressen miteinander kommunizieren.
+
+Die vierte Zeile entspricht dem Transport Layer. Hier werden die
+konkreten Dienste über die entsprechenden Ports angesprochen. DNS "hört"
+am Port 53. Der Port des Absenders wird willkürlich im Bereich
+ausserhalb der sog. 
+["well known
+ports"](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports)
+gewählt.
+
+Die letzte Zeile fasst die eigentliche DNS Anfrage zusammen.
+
+### Die DNS-Anfrage für nzz.ch im Detail
+
+- maximale Auffaltung der letzten Zeile
+
+Der aufgefaltete Teil der letzten Zeile sieht im Wesentlichen
+folgendermassen aus:
+
+```txt
+...
+Domain Name System (query)
+    Transaction ID: 0x3a4c
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        www.nzz.ch: type A, class IN
+            Name: www.nzz.ch
+            [Name Length: 10]
+            [Label Count: 3]
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+    [Response In: 2]
+```
+
+beziehungsweise in hexadezimaler Darstellung:
+
+```txt
+3a 4c 01 00 00 01 00 00 
+00 00 00 00 03 77 77 77 
+03 6e 7a 7a 02 63 68 00 
+00 01 00 01
+
+```
+
+*Auswertung (Besprechung):*
+
+Die hexadezimale Darstellung entspricht im Umfang der Kopie des
+Textauszugs. Die hexadezimale Darstellung wird dazu verwendet, um
+nachzuvollziehen, wie die Anfrage der schematischen Darstellung aus
+Fall, Kevin R., und W. Richard Stevens, TCP/IP illustrated, volume 1:
+The Protocols, 2nd ed., Addison-Wesley professional computing series, 
+Upper Saddle River, NJ: Addison-Wesley, 2012, p. 521, entspricht.
+
+Als erstes ist die Transaction ID in eine Binärzahl umzurechnen.
+
+$$
+0x3a4c = 0b0011101001001100
+$$
+
+Die Transaction ID gibt ergibt nur mit zwei führenden Nullen 16 Stellen.
+Das steht jedoch dem Schema nicht entgegen.
+
+Die zweite Zeile sind die verschiedenen Flags:
+
+$$
+0x0100 = 0b0000000100000000
+$$
+
+Einzelne Bits sind hier nicht gesetzt, weshalb eine Null eingesetzt
+wurde. So sind es genau 16 Bits.
+
+Die Zeile mit dem Fragezähler hat den Wert 1 was
+
+$$
+0b0000000000000001
+$$ 
+
+entspricht.
+
+Da noch keine Antwort erfolgt ist, ist der Wert der entsprechenden
+Zeile(n) 0.
+
+$$
+0b0000000000000000
+$$
+
+$$
+0b0000000000000000
+$$
+
+$$
+0b0000000000000000
+$$
+
+Die Codierung der Adresse erstreckt sich über mehrere Zeilen (für jedes
+Zeichen stehen 8 Bit zur Verfügung):
+
+```txt
+00000011 01110111
+01110111 01110111
+00000011 01101110
+01111010 01111010
+00000010 01100011
+01101000 00000000
+00000000 00000001 
+00000000 00000001
+
+```
+
+Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
+
+| Code | Zeichen |
+| ---: | :---: |
+| 00000011 | ETX |
+| 01110111 | w |
+| 01110111 | w |
+| 01110111 | w |
+| 00000011 | ETX |
+| 01101110 | n |
+| 01111010 | z |
+| 01111010 | z |
+| 00000010 | STX |
+| 01100011 | c |
+| 01101000 | h |
+
+
+
+
+
+
+
+
+
 
 Das ergibt eine Zusammenfassung, die im Wesentlichen folgendermassen
 aussieht (die entsprechend gefilterte 
