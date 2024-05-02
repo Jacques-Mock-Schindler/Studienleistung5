@@ -68,7 +68,8 @@ Wireshark verfügt über
 Installationsprogramme für alle gängigen Betriebssysteme.
 
 Darüber hinaus wird ausschliesslich mit Standardsoftware wie einem
-(bliebigen) Browser und dem Terminal gearbeitet.
+(beliebigen) Browser und dem Terminal gearbeitet.
+
 
 ## Unterrichtsmethode
 
@@ -93,6 +94,16 @@ Die Aufgaben können unterschiedlich detailliert gelöst werden. Der
 Detaillierungsgrad der Bearbeitung ermöglicht es, besonders
 interessierten SuS oder auch speziell engagierten Klassen die
 Gelegenheit zur Vertiefung zu bieten.
+
+Für die vorliegende Unterrichtseinheit werden die folgenden Dokumente
+und Dateien verwendet:
+
+- Wie China unter Xi das Internet kontrolliert, NZZ vom 24. Oktober 2022
+  (PDF)
+- ping_nzz.pcapng 
+- dns_anfrage_nzz.pcapng
+- handshake_nzz.pcapng
+- kariertes Notizpapier (vorzugsweise 5mm, von den SuS selber mitzubringen)
 
 ## Aufgaben mit Lösungen
 
