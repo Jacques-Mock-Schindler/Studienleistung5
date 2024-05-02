@@ -134,6 +134,25 @@ Daraus ergeben sich die folgenden beiden Fragen:
 - Was ist eine IP-Adresse?
 - Woher kommt die IP-Adresse für nzz.ch?
 
+### Kontrolle der eigenen DNS-Einstellungen
+
+1. Einstellungen öffnen (Windows > Einstellungen)
+2. Netzwerk und Internet
+3. Eigenschaften der aktuellen Schnittstelle (wahrscheinlich WLAN)
+4. Scrollen bis IPv4-DNS-Server
+
+*Auswertung (Besprechung):*
+
+Als erstes ist festzustellen, was für DNS-Server die SuS eingestellt
+haben. Gegebenenfalls können die Einstellungen manuell angepasst werden.
+Wichtig ist darauf hinzuweisen, dass eine unverschlüsselte DNS-Abfrage
+ein Risiko darstellt. Die im Screenshot dargestellte Lösung ist das
+Resultat der Verwendung von `Cisco AnyConnect Secure Mobility Client`.
+Gewisse Unternehmen (zB. die
+UNI Fribourg) verlangen dessen Verwendung als VPN Client .
+Dieser führt dazu, dass in der Registry ein Eintrag vorgenommen wird,
+welcher die Verwendung von https für die DNS-Anfrage verhindert.
+
 
 ### Aufzeichnung ping nzz.ch
 
