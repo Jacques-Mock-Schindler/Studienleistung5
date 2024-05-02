@@ -56,15 +56,19 @@ Die SuS
 
 ## Erforderliche Software bzw. Vorbereitung
 
-Für diese Unterrichtseinheit muss
-[Wireshark](https://www.wireshark.org/)
-auf den Rechnern der SuS installierst sein. Wireshark ist eine Open
+Die vorliegende Unterrichtseinheit erfordert als spezielle Software nur
+die Installation von 
+[Wireshark](https://www.wireshark.org/).
+Wireshark ist eine Open
 Source Software für die Analyse von Computernetzwerken. In dieser
 Unterrichtseinheit wird Wireshark dazu verwendet, die DNS-Anfrage und
 den Verbindungsaufbau zu einer bestimmten Website (im Beispiel die
 Website der NZZ) zu beobachten.  
 Wireshark verfügt über
 Installationsprogramme für alle gängigen Betriebssysteme.
+
+Darüber hinaus wird ausschliesslich mit Standardsoftware wie einem
+(bliebigen) Browser und dem Terminal gearbeitet.
 
 ## Unterrichtsmethode
 
