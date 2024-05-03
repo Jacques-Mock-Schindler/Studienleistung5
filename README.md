@@ -45,7 +45,7 @@ Ihre Lerneinheit enthält
 - Beispiele.
 
 ### Auftrag 3: Die Musterlösungen
-Die Lösungen zu allen Aufgaben als lauffähigen Python-Code stellen Sie als separate py- Dateien zur Verfügung.
+Die Lösungen zu allen Aufgaben als lauffähigen Python-Code stellen Sie als separate py-Dateien zur Verfügung.
 
 ## 3.	Anhaltspunkte für die Bewertung 
 ### Fachliche Korrektheit
