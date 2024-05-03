@@ -111,7 +111,7 @@ h2 {
 <div class="content">
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
-* Diese Frage wird im folgenden Schritt für Schritt beantwortet.
+* Diese Frage wird im Folgenden Schritt für Schritt beantwortet.
 </div>
 
 <!--
@@ -327,7 +327,7 @@ No. Time      Src            Dst      Prot length  Info
 1   0.000000  192.168.1.107  9.9.9.9  DNS  66      Standard query 0x007a A nzz.ch
 ```
 * Von der IP-Adresse 192.168.1.107 wird die IP-Adresse 9.9.9.9 aufgerufen, um die IP-Adresse von www.nzz.ch abzufragen.  
-* 192.168.1.101 ist der Rechner, der Versucht www.nzz.ch aufzurufen. 9.9.9.9 ist der DNS Server.
+* 192.168.1.101 ist der Rechner, der versucht www.nzz.ch aufzurufen. 9.9.9.9 ist der DNS Server.
 
 <!--
 Diese Folie ist eine Hilfestellung zur Auswahl des richtigen Paketes.
@@ -339,11 +339,11 @@ Diese Folie ist eine Hilfestellung zur Auswahl des richtigen Paketes.
 
 ### DNS-Anfrage
 
-Wie sieht das DNS-Anfrage Packet aus?
+Wie sieht das DNS-Anfrage Paket aus?
 
 
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
-Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die eigentliche Anfrage kommt.  
+Der erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt von einer 12 Byte langen Sequenz aus verschiedenen Flags, bevor die eigentliche Anfrage kommt.  
 
 Auf der folgenden Folie findet sich eine schematische Darstellung einer solchen DNS Anfrage.
 
@@ -361,7 +361,7 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ---
 
-## DNS-Anfrage (Wireshark Packet Analyse)
+## DNS-Anfrage (Wireshark Paket Analyse)
 
 ```txt
 Frame 10: 70 bytes on wire (560 bits), 70 bytes captured (560 bits) ...
@@ -398,7 +398,7 @@ Quelle: https://www.geeksforgeeks.org/tcp-ip-model/; besucht am 25. April 2024
 
 ---
 
-## DNS-Anfrage (Wireshark Packet Analyse)
+## DNS-Anfrage (Wireshark Paket Analyse)
 
 ```txt
 Domain Name System (query)
