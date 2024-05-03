@@ -102,11 +102,11 @@ Für die vorliegende Unterrichtseinheit werden die folgenden Dokumente
 und Dateien verwendet:
 
 - Wie China unter Xi das Internet kontrolliert, NZZ vom 24. Oktober 2022
-  ([PDF](../data/basic_texts/221025_nzz.pdf))
-- ASCII Character Conversion Chart ([ascii-table.pdf](../data/basic_texts/ascii-table.pdf))
-- [ping_nzz.pcapng](../data/wireshark/ping_nzz.pcapng)
-- [dns_anfrage_nzz.pcapng](../data/wireshark/dns_anfrage_nzz.pcapng)
-- [handshake_nzz.pcapng](../data/wireshark/handshake_nzz.pcapng)
+  ([PDF](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/basic_texts/221025_nzz.pdf))
+- ASCII Character Conversion Chart ([ascii-table.pdf](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/basic_texts/ascii-table.pdf))
+- [ping_nzz.pcapng](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/wireshark/ping_nzz.pcapng)
+- [dns_anfrage_nzz.pcapng](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/wireshark/dns_anfrage_nzz.pcapng)
+- [handshake_nzz.pcapng](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/wireshark/handshake_nzz.pcapng)
 - kariertes Notizpapier (vorzugsweise 5mm, von den SuS selber
   mitzubringen)
 - Präsentation ([slides.html](./240503_slides.html))
