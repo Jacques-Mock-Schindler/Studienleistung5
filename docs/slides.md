@@ -12,49 +12,167 @@ author: Jacques Mock Schindler
     section { justify-content: start; }
 </style>
 
-# Einführung in TCP/IP
+<style scoped>
+  h1 {color: white;
+      background-color: rgba(0, 0, 0, 0.35);
+      border-radius: 4px;
+      }
+section {
+  background-image: url('../data/images/telefonvermittlung.jpg'); /* Pfad zum Hintergrundbild */
+  background-size: cover; /* Stellt sicher, dass das Bild die ganze Folie bedeckt */
+  background-position: center; /* Zentriert das Bild */
+}
+.footer-text {
+  position: absolute;
+  bottom: 10px; /* Positionierung vom unteren Rand */
+  right: 10px; /* Positionierung vom rechten Rand */
+  background-color: rgba(0, 0, 0, 0.6); /* Semitransparenter schwarzer Hintergrund */
+  color: white; /* Weiße Textfarbe */
+  padding: 5px 10px; /* Innenabstand */
+  border-radius: 4px; /* Abgerundete Ecken */
+  font-size: 12pt; /* Kleinere Schriftgröße */
+}
+
+</style>
+
+# Verbindungsaufbau zu einer Website
+
+<div class="footer-text">
+  Quelle: Museum für Kommunikation (https://bit.ly/3Qqu6Nk), besucht am 29. April 2024.
+</div>
 
 ---
 
-![NZZ vom 24. Oktober 22](../data/images/nzz_anriss.png)
+<!-- paginate: true -->
+
+<style scoped>
+
+  .image {
+  position: relative; /* oder 'absolute' je nach Bedarf */
+  z-index: 1;         /* Niedriger z-Index als der des Footers */
+}
+
+  .footer-text {
+  position: absolute;
+  bottom: 10px; /* Positionierung vom unteren Rand */
+  right: 10px; /* Positionierung vom rechten Rand */
+  background-color: rgba(0, 0, 0, 0.6); /* Semitransparenter schwarzer Hintergrund */
+  color: white; /* Weiße Textfarbe */
+  padding: 5px 10px; /* Innenabstand */
+  border-radius: 4px; /* Abgerundete Ecken */
+  font-size: 12pt; /* Kleinere Schriftgröße */
+  z-index: 1000; /*je höher der z-index, desto weiter im Vordergrund*/
+}
+</style>
+
+
+![Artikel NZZ](../data/images/nzz_anriss.png){ .image }
+
+
+
+<div class="footer-text">
+Quelle: «Wie China unter Xi das Internet kontrolliert». NZZ vom 24. Oktober 2022, https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-kontrolliert-ld.1708411.
+</div>
 
 <!--
-Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Basierend auf Fragen zum Artikel kann dann in das Thema TCP/IP eingeführt werden.
+An dieser Stelle ist die Sensibilisierungsaufgabe zu lösen.
+
+Die SuS erhalten den ganzen Artikel aus der NZZ vom 24. Oktober 22. Die Lektüre kann mit folgender Leitfrage unterstützt werden:
+
+Was macht die Chinesische Regierung, um ihre Zensurmassnahmen durchzusetzen? Fassen Sie die Massnahmen zusammen.
+
+In der Besprechung der Lektüre ist insbesondere auf den folgenden Abschnitt hinzuweisen:
+
+Die Regierung kann bestimmte URL sperren, etwa nzz.ch, die wie jene praktisch aller grossen westlichen Medien in China verboten ist. Sie kann auch den Zugang zu Websites verhindern, indem sie den Datenverkehr manipuliert. Wenn man nämlich die Adresse einer Website im Browser eintippt, liefern Server des sogenannten Domain Name System (DNS) dazu die passende numerische Internetprotokoll-Adresse (IP) – ausser die Regierung leitet die Anfrage zu einer anderen IP weiter. Sie kann auch einfach die zugrunde liegenden IP-Adressen sperren.
 -->
 
 ---
 
-## Was es braucht, um die Website der NZZ aufzurufen
+<style scope>
+h2 {
+  position: absolute; /* Absolutes Positionieren innerhalb der section */
+  top: 0;             /* Setzt es an den oberen Rand der Folie */
+  width: 100%;
+  margin-top: 20px;   /* Optional: Abstand vom oberen Rand */
 
-- eine Adresse
-- www.nzz.ch
+}
 
+.content {
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+
+## Aufruf einer Website am Beispiel der NZZ
+
+<div class="content">
 Was geschieht, wenn die Adresse www.nzz.ch aufgerufen wird?
 
----
-
-### URL zu IP-Adresse
-
-Die URL wird durch eine Anfrage auf einem Domain Name System Server in
-eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark
-beobachten.
-
-```txt
-10	3.502537	192.168.124.106	9.9.9.9	DNS	70	Standard query 0xcf66 A www.nzz.ch
-```
-
-Die IP-Adresse 192.168.160.106 ruft die IP-Adresse 9.9.9.9 auf, um die
-IP-Adresse von www.nzz.ch abzufragen.  
-192.168.160.106 ist der Rechner, der Versucht www.nzz.ch aufzurufen.
-9.9.9.9 ist der DNS Server.
+* Diese Frage wird im folgenden Schritt für Schritt beantwortet.
+</div>
 
 <!--
-Die Beobachtung mittels Wireshark ist als Demonstration möglich. Falls die SuS Wireshark installiert haben, können sie die entsprechenden Beobachtungen selber durchführen.
+Experiment 1: ping nzz.ch
 
-Die Besprechung des Resultates in der Packetlistenanzeige von Wireshark führt dann zur Diskussion der IPv4-Adressen und der DNS Anfrage auf den kommenden Folien.
+Anweisungen:
+1. Terminal öffnen
+2. ping nzz.ch
 
-Trotz allfälliger Bedenken gegenüber dem Einsatz von Wireshark durch die SuS bin ich der Auffassung, dass die SuS unbedingt mit den richtigen Werkzeugen arbeiten sollen. Die Beschränkung auf Lernprogramme untergräbt die Glaubwürdigkeit der LP.
+Besprechen der Ausgabe des Befehls ping nzz.ch. Insbesondere ist darauf hinzuweisen, dass nzz.ch in 194.40.217.80 übersetzt wird. Ausserdem kann auf den in der Besprechung der Lektüre hervorgehobenen Absatz Bezug genommen werden.
 -->
+
+---
+
+## Experiment 1: ping nzz.ch
+
+```txt  
+    Ping wird ausgeführt für nzz.ch [194.40.217.80] mit 32 Bytes Daten:
+    Antwort von 194.40.217.80: Bytes=32 Zeit=10ms TTL=55
+    Antwort von 194.40.217.80: Bytes=32 Zeit=10ms TTL=55
+    Antwort von 194.40.217.80: Bytes=32 Zeit=8ms TTL=55
+    Antwort von 194.40.217.80: Bytes=32 Zeit=14ms TTL=55
+
+    Ping-Statistik für 194.40.217.80:
+        Pakete: Gesendet = 4, Empfangen = 4, Verloren = 0
+        (0% Verlust),
+    Ca. Zeitangaben in Millisek.:
+        Minimum = 8ms, Maximum = 14ms, Mittelwert = 10ms
+
+```
+* Was ist die IP-Adresse?
+* Woher kommt die IP-Adresse für nzz.ch?
+
+
+
+---
+
+<style scope>
+h2 {
+  position: absolute; /* Absolutes Positionieren innerhalb der section */
+  top: 0;             /* Setzt es an den oberen Rand der Folie */
+  width: 100%;
+  margin-top: 20px;   /* Optional: Abstand vom oberen Rand */
+
+}
+
+.content {
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+
+#### IP-Adresse
+
+<div class="content">
+Die IP-Adresse ist eine eindeutige Nummer, unter welcher ein Computer im
+Internet erreichbar ist.
+</div>
 
 ---
 
@@ -62,42 +180,61 @@ Trotz allfälliger Bedenken gegenüber dem Einsatz von Wireshark durch die SuS b
 
 Es gibt zwei Arten von IP-Adressen:
 
-- IPv4  
+* IPv4  
   Diese Adressen bestehen aus 32 Bits und werden in der Form
   255.255.255.255 dargestellt
-- IPv6  
+* IPv6  
   Diese (neueren) Adressen bestehen aus 128 Bits und werden hexadezimal
-  dargestellt. Eine IPv6 Adresse hat für die Darstellung das Format
+  dargestellt. Eine IPv6-Adresse hat für die Darstellung das Format
   2001:0db8:85a3:0000:0000:8a2e:0370:7344
   
-Obwohl der Adressraum von IPv4 Adressen knapp wird, ist es aktuell immer
-noch die vorherrschende Form der Adressierung im Internet.
+* Obwohl die Adressen im Adressraum von IPv4-Adressen knapp werden, ist
+  es aktuell immer noch die vorherrschende Form der Adressierung im Internet.
 
 <!--
-An dieser Stelle ist die Präsentation zu unterbrechen um mit den SuS über die Anzahl verfügbarer Adressen und den Bedarf an verfügbaren Adressen zu sprechen.
+Aufgabe IPv4 und IPv6
 -->
 
 ---
 
 ##### IPv4-Adresse
 
-- IPv4-Adressen werden in verschiedene Gruppen unterteilt.
-- Für den vorliegenden Zweck reicht die Unterteilung in öffentliche und
+* IPv4-Adressen werden in verschiedene Gruppen unterteilt.
+* Für den vorliegenden Zweck reicht die Unterteilung in öffentliche und
   private Adressen. Private Adressen sind die folgenden drei Blöcke:
   - 10.0.0.0 – 10.255.255.255
   - 172.16.0.0 – 172.31.255.255
   - 192.168.0.0 – 192.168.255.255
-- Private Adressen sind aus dem Internet nicht direkt erreichbar. Sie
+* Private Adressen sind aus dem Internet nicht direkt erreichbar. Sie
   dienen der Adressierung von Computern in einem lokalen Netzwerk.
 
 ---
 
-##### Network Address Translation (NAT)
+##### Exkurs Network Address Translation (NAT)
 
-Damit die Kommunikation zwischen Computern mit einer öffentlichen und
-solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die
-private Adresse des lokalen Computers in die Adresse des Routers
-übersetzt. 
+<style scope>
+h2 {
+  position: absolute; /* Absolutes Positionieren innerhalb der section */
+  top: 0;             /* Setzt es an den oberen Rand der Folie */
+  width: 100%;
+  margin-top: 20px;   /* Optional: Abstand vom oberen Rand */
+
+}
+
+.content {
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+
+<div class="content">
+Damit die Kommunikation zwischen Computern mit einer öffentlichen und solchen mit einer privaten IPv4-Adresse funktioniert, wird im Router die private Adresse des lokalen Computers in die Adresse des Routers übersetzt. 
+
+Diese Übersetzung zwischen internen und externen IPv4 Adressen hat das Problem der knapper werdenden IPv4 Adressen entschärft.
+</div>
 
 <!--
 NAT soll nicht vertieft werden. Die kursorische Behandlung soll lediglich sicherstellen, dass der Übergang von einem Intranet ins Internet nachvollzogen werden kann.
@@ -105,7 +242,7 @@ NAT soll nicht vertieft werden. Die kursorische Behandlung soll lediglich sicher
 
 ---
 
-##### Network Address Translation (NAT)
+##### Exkurs Network Address Translation (NAT)
 <style scoped>
 p {font-size: 12px}
 </style>
@@ -118,39 +255,41 @@ Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The
 
 ### Domain Name System (DNS)
 
-Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch
-gehörige IP-Adresse gefunden werden.  
+Um die Webite der NZZ erreichen zu können, muss die zur URL www.nzz.ch gehörige IP-Adresse gefunden werden.  
 
 Dieser Vorgang wird als Namensauflösung (*name resolution*) bezeichnet.  
 
-Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank
-mit dem Namen *Domain Name System (DNS)*.
+Das hier vorgestellte Verfahren basiert auf einer dezentralen Datenbank mit dem Namen *Domain Name System (DNS)*.
 
 ---
 
 ### Domain Name System (DNS)
 
-Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen
-Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
+Damit einer der dezentralen DNS-Server erreicht werden kann, muss dessen Adresse auf dem lokalen Computer in der Systemeinstellung abgelegt sein.
 
-Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen
-Computers.  
+Welcher das ist, findet sich in den Netzwerkeinstellungen des lokalen Computers (Netzwerk und Internet > Netzwerkzugang > Eigenschaften > DNS-Server).  
 
 ![DNS-Server](../data/images/bild_ip_dns-server.png)
 
-Der erste hier eingetragene DNS-Server wurde manuell festgelegt. 
+Beide hier eingetragenen DNS-Server wurden manuell festgelegt. 
 
 <!--
-Die SuS erhalten die Gelegenheit, die eigenen Einstellungen zu überprüfen.
+Aufgabe Kontrolle der eigenen DNS-Einstellungen.
+
+An dieser Stelle unbedingt auf die Bedeutung von DoH hinweisen!
 -->
 
 ---
 
 #### Ein paar Gedanken zu den lokalen DNS-Einstellungen
 
-- Welche Reaktionszeit hat der DNS-Server?
-- Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
-- Schützt der DNS-Server meine Privatsphäre?
+
+
+
+* Welche Reaktionszeit hat der DNS-Server?
+* Verwendet der DNS-Server ein aktuelles Sichherheitsdispositiv?
+* Schützt der DNS-Server meine Privatsphäre?
+
 
 <!--
 Die SuS machen ein Ping gegen ihren DNS-Server sowie gegen 1.1.1.1 (Cloudflare), 8.8.8.8 (Google) oder 9.9.9.9 (Quad9).
@@ -160,6 +299,42 @@ Diskussion möglicher Gefahren im Zusammenhang mit DNS-Abfragen.
 Diskussion der Möglichkeiten von Eingriffen in die Privatsphäre bei DNS-Abfragen.
 -->
 
+
+---
+
+## Beobachten des Netzwerkverkehrs mit Wireshark
+
+
+Um im Detail beobachten zu können, wie die Verbindung mit einer Website aufgebaut wird, wird in dieser Unterrichtseinheit der Netzwerkverkehr mit [Wireshark](https://www.wireshark.org/) aufgezeichnet und analysiert.  
+
+Die [Installationsanleitung](https://www.wireshark.org/download.html) findet sich auf der Website von Wireshark.
+
+<!--
+Anweisungen zur Installation von Wireshark abgeben.
+
+Anschliessend ist die Aufgabe zur Aufzeichnung des Aufrufs von nzz.ch zu lösen.
+-->
+
+---
+
+
+### Experiment 2: URL zu IP-Adresse
+
+Die URL wird durch eine Anfrage auf einem Domain Name System Server in eine IP-Adresse übersetzt. Dieser Vorgang lässt sich mittels Wireshark beobachten.
+
+```txt
+No. Time      Src            Dst      Prot length  Info 
+1   0.000000  192.168.1.107  9.9.9.9  DNS  66      Standard query 0x007a A nzz.ch
+```
+* Von der IP-Adresse 192.168.1.107 wird die IP-Adresse 9.9.9.9 aufgerufen, um die IP-Adresse von www.nzz.ch abzufragen.  
+* 192.168.1.101 ist der Rechner, der Versucht www.nzz.ch aufzurufen. 9.9.9.9 ist der DNS Server.
+
+<!--
+Diese Folie ist eine Hilfestellung zur Auswahl des richtigen Paketes.
+-->
+
+
+
 ---
 
 ### DNS-Anfrage
@@ -168,11 +343,9 @@ Wie sieht das DNS-Anfrage Packet aus?
 
 
 Grundsätzlich ist eine DNS Anfrage 512 Bytes lang.  
-Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt
-von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die
-eigentliche Anfrage kommt.  
-Auf der folgenden Folie findet sich eine schematische Darstellung einer
-solchen DNS Anfrage.
+Der Erste Teil ist eine 16 Bit lange Transaktions-ID. Diese wird gefolgt von einer 12 Byte langen Sequenz aus verschiedenen Flags bevor die eigentliche Anfrage kommt.  
+
+Auf der folgenden Folie findet sich eine schematische Darstellung einer solchen DNS Anfrage.
 
 ---
 
@@ -199,21 +372,29 @@ Domain Name System (query)
 
 ```
 
-0. Zusammenfassung des Paketes (Abgeschnitten)
-1. Network Access Layer
+0. Zusammenfassung des Paketes (abgeschnitten)
+1. Network Access Layer (abgeschnitten)
 2. Internet Layer
 3. Transport Layer
 4. Application Layer (um den geht es)
 
 <!--
-An dieser Stelle kann das Layermodell repetiert werden.
-
-Auf dem Internet Layer sieht man, dass die Quelle der Anfrage eine private IPv4 Adresse (192.168.124.106) ist. Das Ziel der Anfrage ist der voreingestellte DNS-Server.
-
-Auf dem Transportlayer ist zu sehen, dass als Ausgangsport ein willkürlich gewählter Port ausserhalb des Ranges der well known ports (port > 49'151) liegt. Der Zielport für die DNS-Abfrage ist 53, der von der IANA diesem Zweck vorbehalten ist.
-
-Auf dem Application Layer schlussendlich ist zu sehen, dass es sich um eine DNS-Anfrage handelt. Was ja auch dem Ziel der Übung entspricht.
+An dieser Stelle beginnt die Analyse der DNS-Anfrage mit Hilfe 
+der Aufgabe "Suche nach der DNS-Anfrage für nzz.ch".
 -->
+
+---
+
+<style scoped>
+p {font-size: 12px}
+</style>
+
+### OSI- bzw. TCP/IP-Layer Modell
+
+![Gegenüberstellung OSI- bzw. TCP/IP-Layer
+Modell](../data/images/layer_modell.png)
+
+Quelle: https://www.geeksforgeeks.org/tcp-ip-model/; besucht am 25. April 2024
 
 ---
 
@@ -238,13 +419,11 @@ Domain Name System (query)
 ```
 
 <!--
-Der Inhalt der Anfrage kann nun mit dem Schema abgeglichen werden:
+Der Besprechung des Inhaltes der Abfrage erfolgt entlang der Aufgabe
+"Die DNS-Abfrage für nzz.ch im Detail".
 
-Hat die Transaction ID 0xcf66 tatsächlich eine Länge von 16 Bit? (Ja, sie entspricht 1100111101100110.)
-
-Was ist in den Flags codiert?
-
-Was ist der Inhalt der Anfrage?
+Für die Besprechung empfiehlt sich die Entwicklung der einzelnen Zeilen
+an der Wandtafel.
 -->
 
 ---
@@ -297,9 +476,8 @@ Domain Name System (response)
 
 
 <!--
-Verweis auf die übereinstimmende Transaction ID und die angepassten Flags.
-
-Die Antwort auf die Anfrage ist 194.40.217.80. Als nächstes kann der Output von Wireshark nach dieser IP-Adresse gefiltert werden.
+Hier erfolgt die Besprechung der Aufgabe
+"Die DNS-Antwort für nzz.ch".
 -->
 
 ---
@@ -323,7 +501,8 @@ p {font-size: 12px}
 Quelle: Fall, Kevin R., und W. Richard Stevens. TCP/IP illustrated, volume 1:The Protocols. 2nd ed. Addison-Wesley professional computing series. Upper Saddle River, NJ: Addison-Wesley, 2012, page 596.
 
 <!--
-Mit dem Filter ip==194.40.217.80 kann der Three-Way Handshake für die TCP Verbindungsaufnahme gezeigt werden.
+Hier erfolgt die Besprechung der Aufgabe
+"Three-Way Handshake".
 -->
 
 ---
@@ -335,4 +514,3 @@ Mit dem Filter ip==194.40.217.80 kann der Three-Way Handshake für die TCP Verbi
 Damit ist nachvollziehbar dargelegt, wie die Verbindung zu einer gegebenen Website aufgebaut wird.
 -->
 
----
