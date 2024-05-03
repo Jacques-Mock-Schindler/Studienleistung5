@@ -1,0 +1,11 @@
+---
+title: "Computernetzwerke: Herstellen einer Verbindung zu einer Website"
+subtitle: "Leistungsnachweis Fachdidaktik 2 im Frühlingssemster 24,
+GymInf"
+author: "Jacques Mock Schindler"
+date: "3. Mai 2024"
+geometry: "a4paper, margin=1.5in"
+lang: de-CH
+header-includes:
+    - \usepackage{url}
+---
