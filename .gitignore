@@ -14,8 +14,10 @@
 !*.drawio
 !*.bib
 !*.csl
+!*.pcapng
 !docs/_layouts/default.html
 # unabhängig davon, wo sie sich befinden
 !*/
 !/visualisierungen/KBW_Laufbahn_SMD.pdf
 !/visualisierungen/detailliertes_zustandsdiagramm.pdf
+!*.yaml 
