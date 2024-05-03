@@ -121,6 +121,13 @@ kontrolliert»](https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-k
 aus der NZZ vom 24. Oktober 2022 gelesen (der Text findet sich als PDF
 in den Unterlagen).
 
+*Leitfrage:*
+
+Was macht die Chinesische Regierung, um ihre Zensurmassnahmen
+durchzusetzen? Fassen Sie die Massnahmen zusammen.
+
+*Besprechung:*
+
 Bei der Besprechung soll insbesondere auf den
 Abschnitt 
 
@@ -436,7 +443,6 @@ Zeichen stehen 8 Bit zur Verfügung):
 00000000 00000001
 
 ```
-\newpage
 
 Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
 
