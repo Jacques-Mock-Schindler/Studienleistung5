@@ -26,7 +26,7 @@ zur Great Firewall[^2] eingeleitet.
 Mit diesem Hinweis auf die gesellschaftliche Bedeutung
 computergestützter Kommunikation soll die Motivation für die
 Auseinandersetzung mit ihrer technischen Umsetzung geschaffen werde. Ich
-erhoffe mir so, nicht zu Letzt auch SuS abzuholen, die sich nicht
+erhoffe mir so, auch SuS abzuholen, die sich nicht
 besonders für technische Konzepte interessieren.
 
 ## Lernziele
@@ -49,7 +49,7 @@ können.
 Die SuS 
 
 - sind mit dem binären und dem hexadezimalen Zahlensystem vertraut;
-- kennen die Grundzüge der Vergabe von Internetdomains ausserdem
+- kennen die Grundzüge der Vergabe von Internetdomains, ausserdem
 - kennen sie das OSI- bzw. IP-Layer-Modell.
 
 
@@ -86,7 +86,7 @@ Die Unterrichtseinheit erfordert ungefähr zwei Doppelstunden.
 Im Unterricht wird man von Seiten der SuS gelegentlich mit dem Vorwurf
 konfrontiert, dass die im Unterricht zur Anwendung kommenden Methoden im
 richtigen Leben nicht verwendet würden. Aus diesem Grund wird mit *echten*
-Werkezeugen wie Wireshark gearbeitet und darauf verzichtet
+Werkzeugen wie Wireshark gearbeitet und darauf verzichtet
 unterrichtsspezifische Software einzusetzen.  
 Dies im vollen Bewusstsein, dass Wireshark für den hier geplanten
 Einsatz viel zu viele Funktionen aufweist. Dies wird in den geplanten
@@ -131,14 +131,14 @@ durchzusetzen? Fassen Sie die Massnahmen zusammen.
 Bei der Besprechung soll insbesondere auf den
 Abschnitt 
 
->Die Regierung kann bestimmte URL sperren, etwa nzz.ch, die wie jene
+>*Die Regierung kann bestimmte URL sperren, etwa nzz.ch, die wie jene
 >praktisch aller grossen westlichen Medien in China verboten ist. Sie
 >kann auch den Zugang zu Websites verhindern, indem sie den Datenverkehr
 >manipuliert. Wenn man nämlich die Adresse einer Website im Browser
 >eintippt, liefern Server des sogenannten Domain Name System (DNS) dazu
 >die passende numerische Internetprotokoll-Adresse (IP) – ausser die
 >Regierung leitet die Anfrage zu einer anderen IP weiter. Sie kann auch
->einfach die zugrunde liegenden IP-Adressen sperren. 
+>einfach die zugrunde liegenden IP-Adressen sperren.* 
 
 im letzten Drittel des Artikels hingewiesen werden.
 
@@ -274,7 +274,7 @@ Datei bildet lediglich die Grundlage für die kommenden Aufgaben.
 
 Falls man sich auf die Analyse der Pakete konzentrieren will, ohne Zeit
 für das herausfiltern der relevanten Pakete zu verbrauchen, kann auf die
-mitgelieferten bereites gefilterten Wireshark-Dateien abgestellt werden.
+mitgelieferten bereits gefilterten Wireshark-Dateien abgestellt werden.
 
 ### Suche nach der DNS-Anfrage für nzz.ch
 
@@ -289,7 +289,7 @@ dns_anfrage_nzz.pcapng
 
 *Resultat:*
 
-Die Zusammenfassung sieht im wesentlichen folgendermassen aus: 
+Die Zusammenfassung sieht im Wesentlichen folgendermassen aus: 
 
 ```txt
 Frame 1: 70 bytes on wire (560 bits), ...
@@ -302,7 +302,7 @@ Domain Name System (query)
 *Auswertung (Besprechung):*
 
 Die erste Zeile gibt eine Zusammenfassung des ausgewählten Paketes. Aus
-darstellerischen Gründen wurde der Inhalt abgeschnitten.
+Gründen des Layouts wurde der Inhalt abgeschnitten.
 
 Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer Modells.
 Der Network Access Layer gibt Auskunft, wie physikalisch die Verbindung
@@ -393,7 +393,7 @@ $$
 0x3a4c = 0b0011101001001100
 $$
 
-Die Transaction ID gibt ergibt nur mit zwei führenden Nullen 16 Stellen.
+Die Transaction ID gibt nur mit zwei führenden Nullen 16 Stellen.
 Das steht jedoch dem Schema nicht entgegen.
 
 Die zweite Zeile ist die Codierung der verschiedenen Flags:
@@ -406,7 +406,7 @@ Einzelne Bits sind hier nicht gesetzt (zu erkennen an den Punkten in der
 Textdarstellung), weshalb eine Null eingesetzt wurde. So sind es genau
 16 Bits.
 
-Die Zeile mit dem Fragezähler hat den Wert 1 was
+Die Zeile mit dem Fragezähler hat den Wert $1$ was
 
 $$
 0b0000000000000001
@@ -461,7 +461,7 @@ Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
 | 01101000 | h |
 
 
-Die ganze Anfrage, beginnend bei der Transaction ID in sieht in
+Die ganze Anfrage, beginnend bei der Transaction ID sieht in
 Binärcodierung folgendermassen aus:
 
 ```txt
@@ -481,7 +481,7 @@ Binärcodierung folgendermassen aus:
 00000000 00000001 
 ```
 
-Die Anfrage kann binär Codiert tatsächlich vollständig in das Schema
+Die Anfrage kann binär codiert tatsächlich vollständig in das Schema
 eingepasst werden.
 
 ### Die DNS-Antwort für nzz.ch
@@ -551,7 +551,7 @@ Das Bit mit dem Antwort-Flag ist auf 1 gesetzt, es ist die Antwort.
 
 Der Error-Code ist 0, die Antwort ist ohne Fehler erfolgt.
 
-Die Antwort lautet der Server der NZZ hat die IPv4-Adresse
+Die Antwort lautet: der Server der NZZ hat die IPv4-Adresse
 194.40.217.80.
 
 ### Three-Way Handshake
