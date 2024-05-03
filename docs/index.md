@@ -76,7 +76,7 @@ Darüber hinaus wird ausschliesslich mit Standardsoftware wie einem
 
 Für diese Lerneinheit eignet sich eine Mischung aus Lehrgespräch und
 Gruppenarbeit. Für die mit Hilfe einer
-[Präsentation](slides.html)
+[Präsentation](240503_slides.html)
 zu vermittelnden theoretischen Grundlagen ist ein Lehrgespräch zu
 führen, die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
 Einzelarbeit durchgeführt werden.
