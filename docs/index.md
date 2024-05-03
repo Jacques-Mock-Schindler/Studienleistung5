@@ -382,9 +382,9 @@ Tabelle kann dann Zeile für Zeile kommentiert werden.
 Die hexadezimale Darstellung wurde so ausgewählt, dass sie im Umfang der
 ausgefalteten Textdarstellung entspricht. Sie wird dazu verwendet,
 nachzuvollziehen, wie die Anfrage der schematischen Darstellung aus 
-Fall, Kevin R., und W. Richard Stevens, TCP/IP illustrated, volume 1:
+*Fall, Kevin R., und W. Richard Stevens, TCP/IP illustrated, volume 1:
 The Protocols, 2nd ed., Addison-Wesley professional computing series, 
-Upper Saddle River, NJ: Addison-Wesley, 2012, p. 521, entspricht.  
+Upper Saddle River, NJ: Addison-Wesley, 2012, p. 521*, entspricht.  
 Dafür braucht es das karierte Papier mit der Tabelle mit den 16 Spalten.
 
 Als erstes ist die Transaction ID in eine Binärzahl umzurechnen.
