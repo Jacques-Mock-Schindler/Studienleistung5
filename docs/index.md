@@ -37,7 +37,7 @@ Mit der vorliegenden Unterrichtseinheit soll erreicht werden, dass die SuS
 - die Aufgabe eines DNS-Servers im Zusammenhang mit dem
   Verbindungsaufbau zwischen einem Computer in einem lokalen Netzwerk
   und einer Website im Internet nachvollziehen;
-- den Three-Way Handshake beim Aufbau der Verbindung zwischen Server und
+- den Three-Way-Handshake beim Aufbau der Verbindung zwischen Server und
   Client erläutern sowie 
 - unter Anleitung Wireshark als Werkzeug für einfache Paketanalysen
   einsetzen
@@ -62,7 +62,7 @@ die Installation von
 [Wireshark](https://www.wireshark.org/).
 Wireshark ist eine Open
 Source Software für die Analyse von Computernetzwerken. In dieser
-Unterrichtseinheit wird Wireshark dazu verwendet, die DNS-Anfrage und
+Unterrichtseinheit wird Wireshark dazu verwendet, die DNS-Anfrage für und
 den Verbindungsaufbau zu einer bestimmten Website (im Beispiel die
 Website der NZZ) zu beobachten.  
 Wireshark verfügt über
@@ -214,7 +214,7 @@ $$
 2^{128} \rightarrow \text{eine Zahl mit 39 Stellen...}
 $$
 
-Als Teil der Besprechung kann kursorisch auf das NAT Protokoll
+Als Teil der Besprechung kann kursorisch auf das NAT-Protokoll
 eingegangen werden. Damit kann gezeigt werden, dass auch IPv4 mehr
 als $2^{32}$ Adressen ermöglicht.
 
@@ -233,11 +233,12 @@ Als erstes ist festzustellen, was für DNS-Server die SuS eingestellt
 haben. Gegebenenfalls können die Einstellungen manuell angepasst werden.
 Wichtig ist darauf hinzuweisen, dass eine unverschlüsselte DNS-Abfrage
 ein Risiko darstellt.  
+*Anmerkung zu Handen des Experten:*  
 Die im Screenshot dargestellte Lösung ist das
 Resultat der Verwendung von `Cisco AnyConnect Secure Mobility Client`.
-Gewisse Unternehmen (zB. die
-UNI Fribourg) verlangen dessen Verwendung als VPN Client.
-Dieser konkrete VPN-Client führt dazu, dass in der Registry ein Eintrag
+Gewisse Unternehmen (z.B. die
+Uni Fribourg) verlangen dessen Verwendung als VPN Client.
+Dieser konkrete VPN-Client führt dazu, dass in der Windows-Registry ein Eintrag
 vorgenommen wird, 
 welcher die Verwendung von https für die DNS-Anfrage verhindert.
 
@@ -273,7 +274,7 @@ erstellte
 Datei bildet lediglich die Grundlage für die kommenden Aufgaben.
 
 Falls man sich auf die Analyse der Pakete konzentrieren will, ohne Zeit
-für das herausfiltern der relevanten Pakete zu verbrauchen, kann auf die
+für das Herausfiltern der relevanten Pakete zu verbrauchen, kann auf die
 mitgelieferten bereits gefilterten Wireshark-Dateien abgestellt werden.
 
 ### Suche nach der DNS-Anfrage für nzz.ch
@@ -304,9 +305,9 @@ Domain Name System (query)
 Die erste Zeile gibt eine Zusammenfassung des ausgewählten Paketes. Aus
 Gründen des Layouts wurde der Inhalt abgeschnitten.
 
-Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer Modells.
-Der Network Access Layer gibt Auskunft, wie physikalisch die Verbindung
-zum Internet hergestellt wird. Dies ist nicht Gegenstand der
+Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer-Modells.
+Der Network Access Layer gibt Auskunft, wie die Verbindung
+zum Internet physikalisch hergestellt wird. Dies ist nicht Gegenstand der
 vorliegenden Unterrichtseinheit.
 
 Die dritte Zeile entspricht dem Network Layer. Auf diesem Layer sieht
@@ -319,7 +320,7 @@ am Port 53. Der Port des Absenders wird willkürlich im Bereich
 ausserhalb der sog. "well known ports" gewählt. Eine Liste dieser "well
 known ports" findet sich auf Wikipedia[^3].
 
-Die letzte Zeile fasst die eigentliche DNS Anfrage zusammen. Die
+Die letzte Zeile fasst die eigentliche DNS-Anfrage zusammen. Die
 detaillierte Besprechung erfolgt in der nächsten Aufgabe.
 
 ### Die DNS-Anfrage für nzz.ch im Detail
@@ -461,7 +462,7 @@ Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
 | 01101000 | h |
 
 
-Die ganze Anfrage, beginnend bei der Transaction ID sieht in
+Die ganze Anfrage, beginnend bei der Transaction ID, sieht in
 Binärcodierung folgendermassen aus:
 
 ```txt
