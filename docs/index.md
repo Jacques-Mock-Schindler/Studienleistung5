@@ -245,14 +245,14 @@ Als erstes ist festzustellen, was für DNS-Server die SuS eingestellt
 haben. Gegebenenfalls können die Einstellungen manuell angepasst werden.
 Wichtig ist darauf hinzuweisen, dass eine unverschlüsselte DNS-Abfrage
 ein Risiko darstellt.  
-*Anmerkung zu Handen des Experten:*  
+*Anmerkung zu Handen der Lehrperson:*  
 Die im Screenshot dargestellte Lösung ist das
 Resultat der Verwendung von `Cisco AnyConnect Secure Mobility Client`.
 Gewisse Unternehmen (z.B. die
 Uni Fribourg) verlangen dessen Verwendung als VPN Client.
-Dieser konkrete VPN-Client führt dazu, dass in der Windows-Registry ein Eintrag
-vorgenommen wird, 
-welcher die Verwendung von https für die DNS-Anfrage verhindert.
+Es scheint, dass dieser konkrete VPN-Client dazu führt dazu, dass in der
+Windows-Registry ein Eintrag vorgenommen wird, welcher die Verwendung
+von https für die DNS-Anfrage verhindert.
 
 ### Installation von Wireshark
 
@@ -326,11 +326,26 @@ Die dritte Zeile entspricht dem Network Layer. Auf diesem Layer sieht
 man, welche IP-Adressen die Computer haben, die miteinander
 kommunizieren. 
 
-Die vierte Zeile entspricht dem Transport Layer. Hier werden die
-konkreten Dienste über die entsprechenden Ports angesprochen. DNS "lauscht"
+Die vierte Zeile entspricht dem Transport Layer.  
+Hier werden die
+konkreten Dienste über die entsprechenden Ports angesprochen.  
+Ein Port ergänzt die IP-Adresse um ein Element, welches einen bestimmten
+Dienst auf dem Zielrechner aufruft. Ports werden folgendermassen
+angegeben:
+
+````txt
+192.168.0.1:22
+````
+
+Der Port ist die Zahl hinter dem Doppelpunkt. Häufig verwendete Dienste,
+wie DNS haben fix zugeteilte Ports. Diese werden als "well known ports"
+bezeichnet. Eine Liste dieser "well known ports" findet sich auf
+Wikipedia[^3].
+
+
+DNS "lauscht"
 am Port 53. Der Port des Absenders wird willkürlich im Bereich
-ausserhalb der sog. "well known ports" gewählt. Eine Liste dieser "well
-known ports" findet sich auf Wikipedia[^3].
+ausserhalb der "well known ports" gewählt. 
 
 Die letzte Zeile fasst die eigentliche DNS-Anfrage zusammen. Die
 detaillierte Besprechung erfolgt in der nächsten Aufgabe.
