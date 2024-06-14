@@ -1,3 +1,9 @@
+>Mit diesem Dokument werden die Regieanweisungen für die Lehrpersonen
+>zur Verfügung gestellt, die diese Unterrichtseinheit durchführen wollen.
+>Für die Schülerinnen und Schüler sind die Präsentation und der
+>Zeitungsartikel sowie gegebenenfalls die WireShark-Files (.pcapng)
+>vorgesehn.
+
 ## Motivation
 
 Computernetzwerke ermöglichen die Kommunikation zwischen verschiedenen
