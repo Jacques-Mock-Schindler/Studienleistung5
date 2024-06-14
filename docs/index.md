@@ -56,7 +56,8 @@ Die SuS
 
 - sind mit dem binären und dem hexadezimalen Zahlensystem vertraut;
 - kennen die Grundzüge der Vergabe von Internetdomains, ausserdem
-- kennen sie das OSI- bzw. IP-Layer-Modell.
+- kennen sie das OSI- bzw. IP-Layer-Modell (eine kurze Einführung in die
+  IP-Adressierung erfolgt im Rahmen dieser Unterrichtseinheit).
 
 
 
@@ -222,7 +223,12 @@ $$
 
 Als Teil der Besprechung kann kursorisch auf das NAT-Protokoll
 eingegangen werden. Damit kann gezeigt werden, dass auch IPv4 mehr
-als $2^{32}$ Adressen ermöglicht.
+als $2^{32}$ Adressen ermöglicht.  
+Für die vorliegende Unterrichtseinheit kann im weiteren Verlauf dieser
+Unterrichtseinheit im Sinne einer didaktischen Reduktion unterstellt
+werden, dass der Quell- und der Zielrechner des Verbindungsaufbaus der
+DNS-Anfrage bzw. des Verbindungsaufbaus direkt mit dem Internet
+verbunden sind. So kann die Thematik von Subnetzen umgangen werden.
 
 ### Kontrolle der eigenen DNS-Einstellungen
 
