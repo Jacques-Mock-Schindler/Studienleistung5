@@ -584,6 +584,12 @@ Die Antwort lautet: der Server der NZZ hat die IPv4-Adresse
 
 ### Three-Way Handshake
 
+*Einführung:*
+
+Die Einführung des Three-Way Handshake erfolgt mit der Grafik im
+Foliensatz. Die folgende Aufgabenstellung zeigt, dass der Aufbau der
+Verbindung zu einer Website tatsächlich diesem Ablauf folgt.
+
 *Vorbereitete Datei:*
 
 handshake_nzz.pcapng
