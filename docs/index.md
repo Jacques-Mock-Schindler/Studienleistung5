@@ -1,5 +1,6 @@
 >Mit diesem Dokument werden die Regieanweisungen für die Lehrpersonen
->zur Verfügung gestellt, die diese Unterrichtseinheit durchführen wollen.
+>zur Verfügung gestellt, welche diese Unterrichtseinheit durchführen
+>wollen.  
 >Für die Schülerinnen und Schüler sind die Präsentation und der
 >Zeitungsartikel sowie gegebenenfalls die WireShark-Files (.pcapng)
 >vorgesehn.
@@ -224,11 +225,12 @@ $$
 Als Teil der Besprechung kann kursorisch auf das NAT-Protokoll
 eingegangen werden. Damit kann gezeigt werden, dass auch IPv4 mehr
 als $2^{32}$ Adressen ermöglicht.  
-Für die vorliegende Unterrichtseinheit kann im weiteren Verlauf dieser
-Unterrichtseinheit im Sinne einer didaktischen Reduktion unterstellt
-werden, dass der Quell- und der Zielrechner des Verbindungsaufbaus der
-DNS-Anfrage bzw. des Verbindungsaufbaus direkt mit dem Internet
-verbunden sind. So kann die Thematik von Subnetzen umgangen werden.
+Im Rahmen dieser Unterrichtseinheit kann im weiteren Verlauf im Sinne
+einer didaktischen Reduktion unterstellt 
+werden, dass alle in die DNS-Anfrage bzw. in den Verbinungsaufbau
+involvierten Rechner direkt mit dem Internet
+verbunden sind.  
+So kann die Thematik von Subnetzen umgangen werden.
 
 ### Kontrolle der eigenen DNS-Einstellungen
 
@@ -338,7 +340,7 @@ angegeben:
 ````
 
 Der Port ist die Zahl hinter dem Doppelpunkt. Häufig verwendete Dienste,
-wie DNS haben fix zugeteilte Ports. Diese werden als "well known ports"
+wie DNS, haben fix zugeteilte Ports. Diese werden als "well known ports"
 bezeichnet. Eine Liste dieser "well known ports" findet sich auf
 Wikipedia[^3].
 
@@ -510,7 +512,9 @@ Binärcodierung folgendermassen aus:
 ```
 
 Die Anfrage kann binär codiert tatsächlich vollständig in das Schema
-eingepasst werden.
+eingepasst werden.  
+So kann mit gezeigt werden, dass auch der Aufruf einer Website auf einer
+Folge von Bits basiert.
 
 ### Die DNS-Antwort für nzz.ch
 
