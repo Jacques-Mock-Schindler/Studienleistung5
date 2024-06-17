@@ -1,6 +1,5 @@
->Mit diesem Dokument werden die Regieanweisungen für die Lehrpersonen
->zur Verfügung gestellt, welche diese Unterrichtseinheit durchführen
->wollen.  
+>Lehrpersonen, welche diese Unterrichtseinheit durchführen wollen,
+>erhalten mit diesem Dokument die erforderlichen Regieanweisungen.    
 >Für die Schülerinnen und Schüler sind die Präsentation und der
 >Zeitungsartikel sowie gegebenenfalls die WireShark-Files (.pcapng)
 >vorgesehn.
@@ -27,7 +26,7 @@ begünstigt worden ist[^1].
 Anderseits erlauben die technischen Eigenheiten computergestützter
 Kommunikation auch Zensurmassnahmen in noch nie dagewesenem Ausmass.
 
-Die vorliegende Unterrichtseinheit wird daher mit einem Zeitungsartikel
+Die vorliegende Unterrichtseinheit wird daher mit einem Zeitungsartikel[^7]
 zur Great Firewall[^2] eingeleitet.
 
 Mit diesem Hinweis auf die gesellschaftliche Bedeutung
@@ -83,13 +82,13 @@ Darüber hinaus wird ausschliesslich mit Standardsoftware wie einem
 ## Unterrichtsmethode
 
 Für diese Lerneinheit eignet sich eine Mischung aus Lehrgespräch und
-Gruppenarbeit. Für die mit Hilfe einer
+Gruppenarbeit. Für die mit Hilfe der diesen Text ergänzenden
 [Präsentation](./240503_slides.html)
 zu vermittelnden theoretischen Grundlagen ist ein Lehrgespräch zu
-führen, die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
+führen. Die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
 Einzelarbeit durchgeführt werden.
 
-Die Unterrichtseinheit erfordert ungefähr zwei Doppelstunden.
+Die Unterrichtseinheit erfordert im Minimum zwei Doppelstunden.
 
 Im Unterricht wird man von Seiten der SuS gelegentlich mit dem Vorwurf
 konfrontiert, dass die im Unterricht zur Anwendung kommenden Methoden im
@@ -252,7 +251,7 @@ Die im Screenshot dargestellte Lösung ist das
 Resultat der Verwendung von `Cisco AnyConnect Secure Mobility Client`.
 Gewisse Unternehmen (z.B. die
 Uni Fribourg) verlangen dessen Verwendung als VPN Client.
-Es scheint, dass dieser konkrete VPN-Client dazu führt dazu, dass in der
+Es scheint, dass dieser konkrete VPN-Client dazu führt, dass in der
 Windows-Registry ein Eintrag vorgenommen wird, welcher die Verwendung
 von https für die DNS-Anfrage verhindert.
 
@@ -635,3 +634,8 @@ Damit ist die Verbindung zur Website www.nzz.ch hergestellt.
     
 [^3]: Wikipedia: List of TCP and UDP port numbers,
     https://bit.ly/3WnfGkI, besucht am 2. Mai 2024.
+
+[^7]: Sander, Matthias. «Wie China unter Xi das Internet kontrolliert».
+    NZZ, 24. Oktober 2022, Abschn. Technologie.
+    https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-kontrolliert-ld.1708411. 
+
