@@ -2,14 +2,16 @@
 >erhalten mit diesem Dokument die erforderlichen Regieanweisungen.    
 >Für die Schülerinnen und Schüler sind die Präsentation und der
 >Zeitungsartikel sowie gegebenenfalls die WireShark-Files (.pcapng)
->vorgesehn.
+>vorgesehn.  
+>Eine Liste mit allen Dokumenten und Dateien findet sich im Abschnitt
+>Unterrichtsmethoden. 
 
 ## Motivation
 
 Computernetzwerke ermöglichen die Kommunikation zwischen verschiedenen
 Computern. In der hier beschriebenen Unterrichtseinheit soll für
 Schülerinnen und Schüler (SuS) nachvollziehbar gezeigt werden, wie diese
-Kommunikation auf der Ebene des Verbindungsaufbaus funktioniert. Dies
+Kommunikation auf der Ebene des *Verbindungsaufbaus* funktioniert. Dies
 ist eine sehr technische und abstrakte Betrachtungsweise. Deshalb soll
 auch auf die gesellschaftlichen Folgen der Kommunikation zwischen
 Computern hingewiesen werden.
@@ -64,7 +66,8 @@ Die SuS
 
 ## Erforderliche Software bzw. Vorbereitung
 
-Die vorliegende Unterrichtseinheit erfordert als spezielle Software nur
+Die vorliegende Unterrichtseinheit erfordert als spezielle Software
+ausschliesslich
 die Installation von 
 [Wireshark](https://www.wireshark.org/).
 Wireshark ist eine Open
@@ -105,8 +108,8 @@ Detaillierungsgrad der Bearbeitung ermöglicht es, besonders
 interessierten SuS oder auch speziell engagierten Klassen die
 Gelegenheit zur Vertiefung zu bieten.
 
-Für die vorliegende Unterrichtseinheit werden die folgenden Dokumente
-und Dateien verwendet:
+Für die vorliegende Unterrichtseinheit werden die folgenden 
+*Dokumente und Dateien* verwendet:
 
 - Wie China unter Xi das Internet kontrolliert, NZZ vom 24. Oktober 2022
   ([PDF](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/basic_texts/221025_nzz.pdf))
@@ -512,7 +515,7 @@ Binärcodierung folgendermassen aus:
 
 Die Anfrage kann binär codiert tatsächlich vollständig in das Schema
 eingepasst werden.  
-So kann mit gezeigt werden, dass auch der Aufruf einer Website auf einer
+Ausserdem kann gezeigt werden, dass auch der Aufruf einer Website auf einer
 Folge von Bits basiert.
 
 ### Die DNS-Antwort für nzz.ch
@@ -589,7 +592,7 @@ Die Antwort lautet: der Server der NZZ hat die IPv4-Adresse
 
 *Einführung:*
 
-Die Einführung des Three-Way Handshake erfolgt mit der Grafik im
+Die Einführung des Three-Way Handshake erfolgt anhand der Grafik im
 Foliensatz. Die folgende Aufgabenstellung zeigt, dass der Aufbau der
 Verbindung zu einer Website tatsächlich diesem Ablauf folgt.
 
