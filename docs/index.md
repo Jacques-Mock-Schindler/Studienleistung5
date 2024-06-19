@@ -1,9 +1,17 @@
+>Lehrpersonen, welche diese Unterrichtseinheit durchführen wollen,
+>erhalten mit diesem Dokument die erforderlichen Regieanweisungen.    
+>Für die Schülerinnen und Schüler sind die Präsentation und der
+>Zeitungsartikel sowie gegebenenfalls die WireShark-Files (.pcapng)
+>vorgesehn.  
+>Eine Liste mit allen Dokumenten und Dateien findet sich im Abschnitt
+>Unterrichtsmethoden. 
+
 ## Motivation
 
 Computernetzwerke ermöglichen die Kommunikation zwischen verschiedenen
 Computern. In der hier beschriebenen Unterrichtseinheit soll für
 Schülerinnen und Schüler (SuS) nachvollziehbar gezeigt werden, wie diese
-Kommunikation auf der Ebene des Verbindungsaufbaus funktioniert. Dies
+Kommunikation auf der Ebene des *Verbindungsaufbaus* funktioniert. Dies
 ist eine sehr technische und abstrakte Betrachtungsweise. Deshalb soll
 auch auf die gesellschaftlichen Folgen der Kommunikation zwischen
 Computern hingewiesen werden.
@@ -20,7 +28,7 @@ begünstigt worden ist[^1].
 Anderseits erlauben die technischen Eigenheiten computergestützter
 Kommunikation auch Zensurmassnahmen in noch nie dagewesenem Ausmass.
 
-Die vorliegende Unterrichtseinheit wird daher mit einem Zeitungsartikel
+Die vorliegende Unterrichtseinheit wird daher mit einem Zeitungsartikel[^7]
 zur Great Firewall[^2] eingeleitet.
 
 Mit diesem Hinweis auf die gesellschaftliche Bedeutung
@@ -37,7 +45,7 @@ Mit der vorliegenden Unterrichtseinheit soll erreicht werden, dass die SuS
 - die Aufgabe eines DNS-Servers im Zusammenhang mit dem
   Verbindungsaufbau zwischen einem Computer in einem lokalen Netzwerk
   und einer Website im Internet nachvollziehen;
-- den Three-Way Handshake beim Aufbau der Verbindung zwischen Server und
+- den Three-Way-Handshake beim Aufbau der Verbindung zwischen Server und
   Client erläutern sowie 
 - unter Anleitung Wireshark als Werkzeug für einfache Paketanalysen
   einsetzen
@@ -50,19 +58,21 @@ Die SuS
 
 - sind mit dem binären und dem hexadezimalen Zahlensystem vertraut;
 - kennen die Grundzüge der Vergabe von Internetdomains, ausserdem
-- kennen sie das OSI- bzw. IP-Layer-Modell.
+- kennen sie das OSI- bzw. IP-Layer-Modell (eine kurze Einführung in die
+  IP-Adressierung erfolgt im Rahmen dieser Unterrichtseinheit).
 
 
 
 
 ## Erforderliche Software bzw. Vorbereitung
 
-Die vorliegende Unterrichtseinheit erfordert als spezielle Software nur
+Die vorliegende Unterrichtseinheit erfordert als spezielle Software
+ausschliesslich
 die Installation von 
 [Wireshark](https://www.wireshark.org/).
 Wireshark ist eine Open
 Source Software für die Analyse von Computernetzwerken. In dieser
-Unterrichtseinheit wird Wireshark dazu verwendet, die DNS-Anfrage und
+Unterrichtseinheit wird Wireshark dazu verwendet, die DNS-Anfrage für und
 den Verbindungsaufbau zu einer bestimmten Website (im Beispiel die
 Website der NZZ) zu beobachten.  
 Wireshark verfügt über
@@ -75,13 +85,13 @@ Darüber hinaus wird ausschliesslich mit Standardsoftware wie einem
 ## Unterrichtsmethode
 
 Für diese Lerneinheit eignet sich eine Mischung aus Lehrgespräch und
-Gruppenarbeit. Für die mit Hilfe einer
+Gruppenarbeit. Für die mit Hilfe der diesen Text ergänzenden
 [Präsentation](./240503_slides.html)
 zu vermittelnden theoretischen Grundlagen ist ein Lehrgespräch zu
-führen, die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
+führen. Die Bearbeitung der Aufgaben kann wahlweise als Gruppen- oder
 Einzelarbeit durchgeführt werden.
 
-Die Unterrichtseinheit erfordert ungefähr zwei Doppelstunden.
+Die Unterrichtseinheit erfordert im Minimum zwei Doppelstunden.
 
 Im Unterricht wird man von Seiten der SuS gelegentlich mit dem Vorwurf
 konfrontiert, dass die im Unterricht zur Anwendung kommenden Methoden im
@@ -98,8 +108,8 @@ Detaillierungsgrad der Bearbeitung ermöglicht es, besonders
 interessierten SuS oder auch speziell engagierten Klassen die
 Gelegenheit zur Vertiefung zu bieten.
 
-Für die vorliegende Unterrichtseinheit werden die folgenden Dokumente
-und Dateien verwendet:
+Für die vorliegende Unterrichtseinheit werden die folgenden 
+*Dokumente und Dateien* verwendet:
 
 - Wie China unter Xi das Internet kontrolliert, NZZ vom 24. Oktober 2022
   ([PDF](https://github.com/Jacques-Mock-Schindler/Studienleistung5/blob/main/data/basic_texts/221025_nzz.pdf))
@@ -214,9 +224,15 @@ $$
 2^{128} \rightarrow \text{eine Zahl mit 39 Stellen...}
 $$
 
-Als Teil der Besprechung kann kursorisch auf das NAT Protokoll
+Als Teil der Besprechung kann kursorisch auf das NAT-Protokoll
 eingegangen werden. Damit kann gezeigt werden, dass auch IPv4 mehr
-als $2^{32}$ Adressen ermöglicht.
+als $2^{32}$ Adressen ermöglicht.  
+Im Rahmen dieser Unterrichtseinheit kann im weiteren Verlauf im Sinne
+einer didaktischen Reduktion unterstellt 
+werden, dass alle in die DNS-Anfrage bzw. in den Verbinungsaufbau
+involvierten Rechner direkt mit dem Internet
+verbunden sind.  
+So kann die Thematik von Subnetzen umgangen werden.
 
 ### Kontrolle der eigenen DNS-Einstellungen
 
@@ -233,13 +249,14 @@ Als erstes ist festzustellen, was für DNS-Server die SuS eingestellt
 haben. Gegebenenfalls können die Einstellungen manuell angepasst werden.
 Wichtig ist darauf hinzuweisen, dass eine unverschlüsselte DNS-Abfrage
 ein Risiko darstellt.  
+*Anmerkung zu Handen der Lehrperson:*  
 Die im Screenshot dargestellte Lösung ist das
 Resultat der Verwendung von `Cisco AnyConnect Secure Mobility Client`.
-Gewisse Unternehmen (zB. die
-UNI Fribourg) verlangen dessen Verwendung als VPN Client.
-Dieser konkrete VPN-Client führt dazu, dass in der Registry ein Eintrag
-vorgenommen wird, 
-welcher die Verwendung von https für die DNS-Anfrage verhindert.
+Gewisse Unternehmen (z.B. die
+Uni Fribourg) verlangen dessen Verwendung als VPN Client.
+Es scheint, dass dieser konkrete VPN-Client dazu führt, dass in der
+Windows-Registry ein Eintrag vorgenommen wird, welcher die Verwendung
+von https für die DNS-Anfrage verhindert.
 
 ### Installation von Wireshark
 
@@ -273,7 +290,7 @@ erstellte
 Datei bildet lediglich die Grundlage für die kommenden Aufgaben.
 
 Falls man sich auf die Analyse der Pakete konzentrieren will, ohne Zeit
-für das herausfiltern der relevanten Pakete zu verbrauchen, kann auf die
+für das Herausfiltern der relevanten Pakete zu verbrauchen, kann auf die
 mitgelieferten bereits gefilterten Wireshark-Dateien abgestellt werden.
 
 ### Suche nach der DNS-Anfrage für nzz.ch
@@ -304,22 +321,37 @@ Domain Name System (query)
 Die erste Zeile gibt eine Zusammenfassung des ausgewählten Paketes. Aus
 Gründen des Layouts wurde der Inhalt abgeschnitten.
 
-Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer Modells.
-Der Network Access Layer gibt Auskunft, wie physikalisch die Verbindung
-zum Internet hergestellt wird. Dies ist nicht Gegenstand der
+Die zweite Zeile entspricht dem ersten Layer des TCP/IP-Layer-Modells.
+Der Network Access Layer gibt Auskunft, wie die Verbindung
+zum Internet physikalisch hergestellt wird. Dies ist nicht Gegenstand der
 vorliegenden Unterrichtseinheit.
 
 Die dritte Zeile entspricht dem Network Layer. Auf diesem Layer sieht
 man, welche IP-Adressen die Computer haben, die miteinander
 kommunizieren. 
 
-Die vierte Zeile entspricht dem Transport Layer. Hier werden die
-konkreten Dienste über die entsprechenden Ports angesprochen. DNS "lauscht"
-am Port 53. Der Port des Absenders wird willkürlich im Bereich
-ausserhalb der sog. "well known ports" gewählt. Eine Liste dieser "well
-known ports" findet sich auf Wikipedia[^3].
+Die vierte Zeile entspricht dem Transport Layer.  
+Hier werden die
+konkreten Dienste über die entsprechenden Ports angesprochen.  
+Ein Port ergänzt die IP-Adresse um ein Element, welches einen bestimmten
+Dienst auf dem Zielrechner aufruft. Ports werden folgendermassen
+angegeben:
 
-Die letzte Zeile fasst die eigentliche DNS Anfrage zusammen. Die
+````txt
+192.168.0.1:22
+````
+
+Der Port ist die Zahl hinter dem Doppelpunkt. Häufig verwendete Dienste,
+wie DNS, haben fix zugeteilte Ports. Diese werden als "well known ports"
+bezeichnet. Eine Liste dieser "well known ports" findet sich auf
+Wikipedia[^3].
+
+
+DNS "lauscht"
+am Port 53. Der Port des Absenders wird willkürlich im Bereich
+ausserhalb der "well known ports" gewählt. 
+
+Die letzte Zeile fasst die eigentliche DNS-Anfrage zusammen. Die
 detaillierte Besprechung erfolgt in der nächsten Aufgabe.
 
 ### Die DNS-Anfrage für nzz.ch im Detail
@@ -461,7 +493,7 @@ Abgeglichen mit der ASCII-Tabelle ergibt sich daraus das folgende Bild:
 | 01101000 | h |
 
 
-Die ganze Anfrage, beginnend bei der Transaction ID sieht in
+Die ganze Anfrage, beginnend bei der Transaction ID, sieht in
 Binärcodierung folgendermassen aus:
 
 ```txt
@@ -482,7 +514,9 @@ Binärcodierung folgendermassen aus:
 ```
 
 Die Anfrage kann binär codiert tatsächlich vollständig in das Schema
-eingepasst werden.
+eingepasst werden.  
+Ausserdem kann gezeigt werden, dass auch der Aufruf einer Website auf einer
+Folge von Bits basiert.
 
 ### Die DNS-Antwort für nzz.ch
 
@@ -556,6 +590,12 @@ Die Antwort lautet: der Server der NZZ hat die IPv4-Adresse
 
 ### Three-Way Handshake
 
+*Einführung:*
+
+Die Einführung des Three-Way Handshake erfolgt anhand der Grafik im
+Foliensatz. Die folgende Aufgabenstellung zeigt, dass der Aufbau der
+Verbindung zu einer Website tatsächlich diesem Ablauf folgt.
+
 *Vorbereitete Datei:*
 
 handshake_nzz.pcapng
@@ -597,3 +637,8 @@ Damit ist die Verbindung zur Website www.nzz.ch hergestellt.
     
 [^3]: Wikipedia: List of TCP and UDP port numbers,
     https://bit.ly/3WnfGkI, besucht am 2. Mai 2024.
+
+[^7]: Sander, Matthias. «Wie China unter Xi das Internet kontrolliert».
+    NZZ, 24. Oktober 2022, Abschn. Technologie.
+    https://www.nzz.ch/technologie/wie-china-unter-xi-das-internet-kontrolliert-ld.1708411. 
+

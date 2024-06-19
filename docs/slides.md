@@ -445,6 +445,20 @@ Zusammenfassung der Antwort. Hier erfolgt der Hinweis auf die vertauschten IP-Ad
 
 ---
 
+### DNS-Anfrage (Portnummern)
+
+Portnummern identifizieren konkrete Dienste auf dem Zielrechner.
+
+```txt
+192.168.0.1:22
+```
+
+<!--
+Hier ein Beispiel für die Darstellung der Portnummer. Die konkrete Portnummer 22 spricht TCP an.
+-->
+
+---
+
 ### DNS-Anfrage (Analyse der Antwort)
 
 ```txt
